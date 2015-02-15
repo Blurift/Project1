@@ -28,6 +28,6 @@ public class CharacterController : MonoBehaviour {
 
         Vector2 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        moveController.RotateTowards(mp);
+        moveController.RotateTowards(Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
 }

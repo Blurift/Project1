@@ -6,7 +6,7 @@ public class MovementController : MonoBehaviour {
 
     public float MoveForce;
     public float MaxRotation;
-    public Rigidbody2D body;
+    private Rigidbody2D body;
 
 	// Use this for initialization
 	void Start () {
@@ -52,10 +52,14 @@ public class MovementController : MonoBehaviour {
         Move(new Vector2(power, 0));
     }
 
-    public void Move(Vector2 direction)
+    public void Move(Vector2 force)
     {
-        direction.Normalize();
-        body.AddForce(direction * MoveForce);
+        force.Normalize();
+        Vector2 right = transform.right * force.x;
+        Vector2 up = transform.up * force.y;
+
+        Vector2 applied = (right + up).normalized;
+        body.AddForce(applied * MoveForce);
     }
 
     
@@ -64,7 +68,37 @@ public class MovementController : MonoBehaviour {
 
     public void RotateTowards(Vector2 pos)
     {
-        
+        Vector2 rel = pos - (Vector2)transform.position;
+        float angle = Mathf.Atan2(-rel.x, rel.y) * Mathf.Rad2Deg;
+
+        RotateTowards(angle);
+    }
+
+    public void RotateTowards(float angle)
+    {
+        float current = transform.rotation.eulerAngles.z;
+        float max = MaxRotation * Time.deltaTime;
+
+        float difference = angle - current;
+
+        if (difference < -180)
+            difference += 360;
+        if (difference > 180)
+            difference -= 360;
+
+        if (difference < 0)
+        {
+            max *= -1;
+            if (difference < max)
+                difference = max;
+        }
+        else
+        {
+            if (difference > max)
+                difference = max;
+        }
+
+        transform.Rotate(Vector3.forward, difference);
     }
 
 
