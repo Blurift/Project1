@@ -4,19 +4,33 @@ using System.Collections;
 public class Projectile : MonoBehaviour 
 {
 	public float speed;
-	private Vector2 direction;
-	private Vector2 testVec;
+	private Vector3 dir;
 	void Start ()
 	{
-		//transform.LookAt (Input.mousePosition);
-		direction = new Vector2 (Input.mousePosition.x - transform.position.x, Input.mousePosition.y - transform.position.y);
-		direction.Normalize();
-		Debug.Log (direction);
+		Vector3 sp = Camera.main.WorldToScreenPoint(transform.position);
+		dir = (Input.mousePosition - sp).normalized;
 	}
 	void Update ()
 	{
 		float amtToMove = speed * Time.deltaTime;
-		//rigidbody2D.velocity = transform.forward * amtToMove;
-		transform.Translate(direction * amtToMove);
+		rigidbody2D.velocity = dir * amtToMove;
+	}
+	void OnTriggerEnter2D(Collider2D other) 
+	{
+		if (!(other.tag == "Player")) 
+		{
+			if (other.gameObject.tag == "Enemy") 
+			{
+				Destroy (other.gameObject);
+				Destroy(gameObject);
+			}
+			if (other.gameObject.tag == "Border")
+			{
+				Destroy(gameObject);
+			}
+
+
+		}
+
 	}
 }
