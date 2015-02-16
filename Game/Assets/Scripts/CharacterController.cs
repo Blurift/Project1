@@ -10,6 +10,7 @@ public class CharacterController : MonoBehaviour {
 	public Transform shotSpawn; 
 	public float fireRate;
 	// Use this for initialization
+
 	void Start () {
         moveController = GetComponent<MovementController>();
 	}
