@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Health : MonoBehaviour 
 {
-	private enum State{Alive, Dead};
+	public enum State{Alive, Dead};
 	private float health;
 	public float maxHealth;
 	public State isAlive;
