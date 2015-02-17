@@ -23,7 +23,7 @@ public class Projectile : MonoBehaviour
 		{
 			if (other.gameObject.GetComponent<Health>()!= null)
 			{
-				other.gameObject.GetComponent<Health>().takeDamage(damage);
+				other.gameObject.GetComponent<Health>().TakeDamage(damage);
 			}
 
 			Destroy(gameObject);
