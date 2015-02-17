@@ -3,14 +3,22 @@ using System.Collections;
 
 public class Health : MonoBehaviour 
 {
-
-	public float health;
+	private enum State{Alive, Dead};
+	private float health;
 	public float maxHealth;
+	public State isAlive;
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
+		isAlive = State.Alive;
+		health = maxHealth;
 	
 	}
-	public void takeDamage(float damage)
+	public float GetHealth()
+	{
+		return health;
+	}
+	public void TakeDamage(float damage)
 	{
 		health -= damage;
 	}
@@ -24,7 +32,8 @@ public class Health : MonoBehaviour
 
 		if (health <= 0)
 		{
-			Destroy(gameObject);
+			isAlive = State.Dead;
+		
 		}
 	
 	}
