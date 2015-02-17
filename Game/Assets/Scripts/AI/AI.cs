@@ -18,6 +18,8 @@ public class AI : MonoBehaviour {
 
         float distance = float.MaxValue;
 
+        //Debug.Log("Found " + players.Length + " players");
+
         foreach (GameObject go in players)
         {
             float d = Vector2.Distance(transform.position, go.transform.position);
@@ -43,7 +45,7 @@ public class AI : MonoBehaviour {
     {
         if(col.gameObject.tag == "Player")
         {
-            AIManager.Instance.AIDied(this);
+            AIManager.Instance.AIHitTarget(col.gameObject, this);
         }
     }
 }

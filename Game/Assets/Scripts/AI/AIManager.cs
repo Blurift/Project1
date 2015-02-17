@@ -9,7 +9,9 @@ public class AIManager : MonoBehaviour {
         get
         {
             if (_instance == null)
-                FindObjectOfType<AIManager>();
+            {
+                _instance = FindObjectOfType<AIManager>();
+            }
             return _instance;
         }
     }
@@ -77,9 +79,15 @@ public class AIManager : MonoBehaviour {
         }
     }
 
-    public void AIDied(AI ai)
+    public void AIHitTarget(GameObject target, AI ai)
     {
-        ai.gameObject.SetActive(false);
+        Health h = target.GetComponent<Health>();
+
+        if(h != null)
+        {
+            h.TakeDamage(5);
+            ai.gameObject.SetActive(false);
+        }
 
         //TODO Make some sort of effect here.
     }
