@@ -24,6 +24,8 @@ public class CharacterController : MonoBehaviour {
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
 
 		}
+
+        Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y,-10);
 	}
 
     void FixedUpdate()

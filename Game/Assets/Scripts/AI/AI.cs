@@ -10,7 +10,10 @@ public class AI : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         movement = GetComponent<MovementController>();
+	}
 
+    public void Initialize()
+    {
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
         float distance = float.MaxValue;
@@ -18,26 +21,29 @@ public class AI : MonoBehaviour {
         foreach (GameObject go in players)
         {
             float d = Vector2.Distance(transform.position, go.transform.position);
-            if(d < distance)
+            if (d < distance)
             {
                 distance = d;
                 target = go;
             }
         }
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
         //Temp until AI manager
-        movement.MoveForward();
-        movement.RotateTowards(target.transform.position);
+        if (target != null)
+        {
+            movement.MoveForward();
+            movement.RotateTowards(target.transform.position);
+        }
 	}
 
     void OnCollisionEnter2D(Collision2D col)
     {
         if(col.gameObject.tag == "Player")
         {
-            gameObject.SetActive(false);
+            AIManager.Instance.AIDied(this);
         }
     }
 }
