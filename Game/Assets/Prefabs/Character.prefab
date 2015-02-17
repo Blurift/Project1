@@ -13,7 +13,8 @@ GameObject:
   - 50: {fileID: 5000000}
   - 58: {fileID: 5800000}
   - 114: {fileID: 11400002}
-  m_Layer: 0
+  - 114: {fileID: 11400004}
+  m_Layer: 10
   m_Name: Character
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -28,7 +29,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400002}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SpawnShot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,6 +114,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveForce: 23
   MaxRotation: 360
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6589b49becb256e4ab6a705b23b2dff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 25
+  isAlive: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
