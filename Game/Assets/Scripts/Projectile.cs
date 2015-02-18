@@ -18,10 +18,14 @@ public class Projectile : MonoBehaviour
 	}
 	void OnTriggerEnter2D(Collider2D other) 
 	{
-		
-		if (other.gameObject.GetComponent<Health> () != null)
+		if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+		{
+			return;
+		}
+		else if (other.gameObject.GetComponent<Health> () != null)
 		{
 			other.gameObject.GetComponent<Health> ().TakeDamage (damage);
+
 		} 
 		Destroy(gameObject);
 	}
@@ -30,7 +34,7 @@ public class Projectile : MonoBehaviour
 
 		
 
-	}
-
 }
+
+
 
