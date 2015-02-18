@@ -24,10 +24,20 @@ public class AIManager : MonoBehaviour {
     private float nextSpawn = 0;
 
     private GameObject[] spawns;
+	private GameController gameController;
 
 	// Use this for initialization
 	void Start ()
     {
+		GameObject gameControllerObject = GameObject.FindGameObjectWithTag ("GameController");
+		if (gameControllerObject != null) 
+		{
+			gameController = gameControllerObject.GetComponent <GameController>();
+		}
+		if (gameController == null) 
+		{
+			Debug.Log ("Cannot find 'GameController' script");
+		}
 	    if(AIPrefab != null)
         {
             aiPool = new AI[PoolSize];
@@ -80,7 +90,11 @@ public class AIManager : MonoBehaviour {
             this.enabled = false;
         }
     }
-
+	public void AIDying(int scoreValue, AI ai)
+	{
+		gameController.AddScore (scoreValue);
+		ai.gameObject.SetActive(false);
+	}
     public void AIHitTarget(GameObject target, AI ai)
     {
         Health h = target.GetComponent<Health>();

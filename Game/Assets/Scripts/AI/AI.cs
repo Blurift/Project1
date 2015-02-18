@@ -6,22 +6,11 @@ public class AI : MonoBehaviour {
 
     private GameObject target;
 	public int scoreValue;
-	private GameController gameController;
     private MovementController movement;
 
 	// Use this for initialization
 	void Start () {
         movement = GetComponent<MovementController>();
-
-		GameObject gameControllerObject = GameObject.FindGameObjectWithTag ("GameController");
-		if (gameControllerObject != null) 
-		{
-			gameController = gameControllerObject.GetComponent <GameController>();
-		}
-		if (gameController == null) 
-		{
-			Debug.Log ("Cannot find 'GameController' script");
-		}
 	}
 
     public void Initialize()
@@ -47,8 +36,7 @@ public class AI : MonoBehaviour {
 	void Update () {
 		if (gameObject.GetComponent<Health> ().isAlive == Health.State.Dead) 
 		{
-			gameController.AddScore(scoreValue);
-			gameObject.SetActive(false);
+			AIManager.Instance.AIDying(scoreValue, this);
 
 		}
 
