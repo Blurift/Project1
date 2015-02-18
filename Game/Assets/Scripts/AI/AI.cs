@@ -36,7 +36,7 @@ public class AI : MonoBehaviour {
 	void Update () {
 		if (gameObject.GetComponent<Health> ().isAlive == Health.State.Dead) 
 		{
-			AIManager.Instance.AIDying(this);
+			AIManager.Instance.AIDying(scoreValue, this);
 
 		}
 
