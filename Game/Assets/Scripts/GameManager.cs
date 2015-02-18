@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class GameController : MonoBehaviour {
+public class GameManager : MonoBehaviour {
 	public GameObject player;
 	public Text restartText;
 	public Text scoreText;
