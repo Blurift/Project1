@@ -17,7 +17,6 @@ public class Health : MonoBehaviour
 	public void ResetHealth()
 	{
 		health = maxHealth;
-		isAlive = State.Alive;
 	}
 	public void SetState(State state)
 	{
