@@ -18,28 +18,30 @@ public class CharacterController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		if (Input.GetButton("Fire1") && Time.time > nextFire) 
+		if (gameObject.GetComponent<Health>().isAlive == Health.State.Alive) 
 		{
-			nextFire = Time.time + fireRate;
-			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-
+			if (Input.GetButton ("Fire1") && Time.time > nextFire) 
+			{
+				nextFire = Time.time + fireRate;
+				Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+			}
+			Camera.main.transform.position = new Vector3 (transform.position.x, transform.position.y, -10);
 		}
-
-        Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y,-10);
 	}
 
     void FixedUpdate()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
-        Vector2 moveV = new Vector2(x, y);
-        if(moveV != Vector2.zero)
-        {
-            moveController.Move(moveV);
-        }
-
-        Vector2 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        moveController.RotateTowards(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+		if (gameObject.GetComponent<Health> ().isAlive == Health.State.Alive) 
+		{
+			float x = Input.GetAxisRaw ("Horizontal");
+			float y = Input.GetAxisRaw ("Vertical");
+			Vector2 moveV = new Vector2 (x, y);
+			if (moveV != Vector2.zero) 
+			{
+				moveController.Move (moveV);
+			}
+			Vector2 mp = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			moveController.RotateTowards (Camera.main.ScreenToWorldPoint (Input.mousePosition));
+		}
     }
 }

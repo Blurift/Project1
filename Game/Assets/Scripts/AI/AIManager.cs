@@ -61,6 +61,8 @@ public class AIManager : MonoBehaviour {
                 {
                     aiPool[index].transform.position = spawns[rIndex].transform.position;
                     aiPool[index].gameObject.SetActive(true);
+					aiPool[index].gameObject.GetComponent<Health>().SetState(Health.State.Alive);
+					aiPool[index].gameObject.GetComponent<Health>().ResetHealth();
                     aiPool[index].Initialize();
                 }
             }

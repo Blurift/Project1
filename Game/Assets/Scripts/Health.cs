@@ -14,6 +14,14 @@ public class Health : MonoBehaviour
 		health = maxHealth;
 	
 	}
+	public void ResetHealth()
+	{
+		health = maxHealth;
+	}
+	public void SetState(State state)
+	{
+		isAlive = state;
+	}
 	public float GetHealth()
 	{
 		return health;
