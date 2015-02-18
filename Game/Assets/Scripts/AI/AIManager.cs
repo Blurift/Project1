@@ -24,7 +24,7 @@ public class AIManager : MonoBehaviour {
     private float nextSpawn = 0;
 
     private GameObject[] spawns;
-	private GameController gameController;
+	private GameManager gameController;
 
 	// Use this for initialization
 	void Start ()
@@ -32,7 +32,7 @@ public class AIManager : MonoBehaviour {
 		GameObject gameControllerObject = GameObject.FindGameObjectWithTag ("GameController");
 		if (gameControllerObject != null) 
 		{
-			gameController = gameControllerObject.GetComponent <GameController>();
+			gameController = gameControllerObject.GetComponent <GameManager>();
 		}
 		if (gameController == null) 
 		{
@@ -71,7 +71,6 @@ public class AIManager : MonoBehaviour {
                 {
                     aiPool[index].transform.position = spawns[rIndex].transform.position;
                     aiPool[index].gameObject.SetActive(true);
-					aiPool[index].gameObject.GetComponent<Health>().SetState(Health.State.Alive);
 					aiPool[index].gameObject.GetComponent<Health>().ResetHealth();
                     aiPool[index].Initialize();
                 }
@@ -90,11 +89,13 @@ public class AIManager : MonoBehaviour {
             this.enabled = false;
         }
     }
-	public void AIDying(int scoreValue, AI ai)
+
+	public void AIDying(AI ai)
 	{
-		gameController.AddScore (scoreValue);
+		gameController.AddScore (ai.scoreValue);
 		ai.gameObject.SetActive(false);
 	}
+
     public void AIHitTarget(GameObject target, AI ai)
     {
         Health h = target.GetComponent<Health>();
