@@ -90,9 +90,9 @@ public class AIManager : MonoBehaviour {
             this.enabled = false;
         }
     }
-	public void AIDying(int scoreValue, AI ai)
+	public void AIDying(AI ai)
 	{
-		gameController.AddScore (scoreValue);
+		gameController.AddScore (ai.scoreValue);
 		ai.gameObject.SetActive(false);
 	}
     public void AIHitTarget(GameObject target, AI ai)
