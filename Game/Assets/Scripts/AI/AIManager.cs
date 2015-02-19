@@ -24,20 +24,12 @@ public class AIManager : MonoBehaviour {
     private float nextSpawn = 0;
 
     private GameObject[] spawns;
-	private GameManager gameController;
+	private GameManager gameManager;
 
 	// Use this for initialization
 	void Start ()
     {
-		GameObject gameControllerObject = GameObject.FindGameObjectWithTag ("GameController");
-		if (gameControllerObject != null) 
-		{
-			gameController = gameControllerObject.GetComponent <GameManager>();
-		}
-		if (gameController == null) 
-		{
-			Debug.Log ("Cannot find 'GameController' script");
-		}
+        gameManager = GetComponent<GameManager>();
 	    if(AIPrefab != null)
         {
             aiPool = new AI[PoolSize];
@@ -91,7 +83,7 @@ public class AIManager : MonoBehaviour {
     }
 	public void AIDying(AI ai)
 	{
-		gameController.AddScore (ai.scoreValue);
+		gameManager.AddScore (ai.scoreValue);
 		ai.gameObject.SetActive(false);
 	}
     public void AIHitTarget(GameObject target, AI ai)

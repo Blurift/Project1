@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -42,6 +43,21 @@ MonoBehaviour:
   PoolSize: 30
   AIPrefab: {fileID: 100000, guid: d414297ca8e6df64e98ec90b0f145c35, type: 2}
   SpawnFrequency: 2
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91a722c6f0f8fcc4bbd6b83347cf9daa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  restartText: {fileID: 0}
+  scoreText: {fileID: 0}
+  AIManager: {fileID: 100000}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
