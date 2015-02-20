@@ -5,16 +5,14 @@ public class Projectile : MonoBehaviour
 {
 	public float speed;
 	public float damage;
-	private Vector3 dir;
+
 	void Start ()
 	{
-		Vector3 sp = Camera.main.WorldToScreenPoint(transform.position);
-		dir = (Input.mousePosition - sp).normalized;
 	}
 	void Update ()
 	{
 		float amtToMove = speed * Time.deltaTime;
-		rigidbody2D.velocity = dir * amtToMove;
+		rigidbody2D.velocity =  transform.up * amtToMove;
 	}
 	void OnTriggerEnter2D(Collider2D other) 
 	{
