@@ -41,7 +41,23 @@ TagManager:
   User Layer 30: 
   User Layer 31: 
   m_SortingLayers:
+  - name: Ground
+    userID: 3
+    uniqueID: 4138114229
+    locked: 0
+  - name: GroundObjects
+    userID: 4
+    uniqueID: 1549149499
+    locked: 0
   - name: Default
     userID: 0
     uniqueID: 0
+    locked: 0
+  - name: Character
+    userID: 2
+    uniqueID: 3917574373
+    locked: 0
+  - name: Effects
+    userID: 1
+    uniqueID: 3236244133
     locked: 0
