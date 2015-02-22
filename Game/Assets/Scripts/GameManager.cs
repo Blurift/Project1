@@ -4,10 +4,11 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 	public GameObject player;
-	public Text restartText;
 	public Text scoreText;
 	public GameObject AIManager;
+	public GameObject deathScreen;
 	private int score;
+	private bool isRunning = true;
 	// Use this for initialization
 	void Start () 
 	{
@@ -26,15 +27,11 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (player.GetComponent<Health> ().isAlive == Health.State.Dead) 
+		if (player.GetComponent<Health> ().isAlive == Health.State.Dead && isRunning) 
 		{
 			AIManager.GetComponent<AIManager>().Disable();
-			restartText.text = "Press 'R' for Restart";
-			if (Input.GetKeyDown (KeyCode.R)) 
-			{
-				Application.LoadLevel (Application.loadedLevel);
-			}
-
+			Instantiate(deathScreen);
+			isRunning = false;
 		}
 	
 	}

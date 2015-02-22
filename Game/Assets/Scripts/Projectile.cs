@@ -8,11 +8,11 @@ public class Projectile : MonoBehaviour
 
 	void Start ()
 	{
+		rigidbody2D.AddForce (transform.up * speed);
 	}
 	void Update ()
 	{
-		float amtToMove = speed * Time.deltaTime;
-		rigidbody2D.velocity =  transform.up * amtToMove;
+
 	}
 	void OnTriggerEnter2D(Collider2D other) 
 	{
