@@ -10,6 +10,7 @@ public class CharacterController : MonoBehaviour {
 	public GameObject shot;
 	public Transform shotSpawn; 
 	public float fireRate;
+	public AudioClip fireSound;
 	// Use this for initialization
 
 	void Start () {
@@ -25,6 +26,7 @@ public class CharacterController : MonoBehaviour {
 		{
 			if (Input.GetButton ("Fire1") && Time.time > nextFire) 
 			{
+				SoundManager.Instance.PlayIt(fireSound, false, transform.position);
 				nextFire = Time.time + fireRate;
 				Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
 			}
