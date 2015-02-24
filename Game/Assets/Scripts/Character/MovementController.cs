@@ -8,6 +8,10 @@ public class MovementController : MonoBehaviour {
     public float MaxRotation;
     private Rigidbody2D body;
 
+    public AudioClip[] FootstepSounds;
+    private float nextFootstep = 0;
+    public float FootstepFreq = 0.5f;
+
 	// Use this for initialization
 	void Start () {
         body = GetComponent<Rigidbody2D>();
@@ -15,7 +19,14 @@ public class MovementController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+        if(rigidbody2D.velocity != Vector2.zero && Time.time > nextFootstep && FootstepSounds.Length > 0)
+        {
+            int rfi = Random.Range(0,FootstepSounds.Length); //Random Footstep Index
+
+            SoundManager.Instance.PlayIt(FootstepSounds[rfi], false, transform.position);
+
+            nextFootstep = Time.time + FootstepFreq;
+        }
 	}
 
     public void MoveForward()
