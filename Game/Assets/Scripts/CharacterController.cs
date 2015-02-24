@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Blurift;
 
-[RequireComponent(typeof(MovementController))]
-public class CharacterController : MonoBehaviour {
+[RequireComponent(typeof(MovementController), typeof(Health))]
+public class CharacterController : MonoBehaviour, EntityEventListener  {
 
     MovementController moveController;
     CameraController camera;
@@ -13,10 +14,15 @@ public class CharacterController : MonoBehaviour {
 	public AudioClip fireSound;
 	// Use this for initialization
 
+    private EntityEventManager events;
+
 	void Start () {
         moveController = GetComponent<MovementController>();
         camera = FindObjectOfType<CameraController>();
         camera.Target = transform;
+
+        events = GetComponent<EntityEventManager>();
+        events.AddListener("HealthDamage", this);
 	}
 	
 	// Update is called once per frame
@@ -47,5 +53,15 @@ public class CharacterController : MonoBehaviour {
 			Vector2 mp = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			moveController.RotateTowards (Camera.main.ScreenToWorldPoint (Input.mousePosition));
 		}
+    }
+
+    public void PushEvent(object sender, string type, EntityEvent e)
+    {
+        switch (type)
+        {
+            case "HealthDamage":
+                camera.Shake();
+                break;
+        }
     }
 }

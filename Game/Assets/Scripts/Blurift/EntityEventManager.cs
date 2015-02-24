@@ -13,7 +13,7 @@ namespace Blurift
     public class EntityEventManager : MonoBehaviour
     {
 
-        private Dictionary<string, List<GameEventListener>> listeners = new Dictionary<string, List<GameEventListener>>();
+        private Dictionary<string, List<EntityEventListener>> listeners = new Dictionary<string, List<EntityEventListener>>();
 
         #region PushEvent
 
@@ -23,11 +23,11 @@ namespace Blurift
         /// <param name="e">The event object</param>
         /// <param name="type">The type of event it is</param>
         /// <param name="sender">The object sending the event</param>
-        public void PushEvent(object sender, string type, GameEvent e)
+        public void PushEvent(object sender, string type, EntityEvent e)
         {
             if (listeners.ContainsKey(type))
             {
-                foreach (GameEventListener listener in listeners[type])
+                foreach (EntityEventListener listener in listeners[type])
                 {
                     listener.PushEvent(sender, type, e);
                 }
@@ -41,10 +41,10 @@ namespace Blurift
         /// </summary>
         /// <param name="type">The type of event to listen for.</param>
         /// <param name="l">The listener that will be notified of events.</param>
-        public void AddListener(string type, GameEventListener l)
+        public void AddListener(string type, EntityEventListener l)
         {
             if (!listeners.ContainsKey(type))
-                listeners[type] = new List<GameEventListener>();
+                listeners[type] = new List<EntityEventListener>();
 
             if (!listeners[type].Contains(l))
                 listeners[type].Add(l);
@@ -55,7 +55,7 @@ namespace Blurift
         /// </summary>
         /// <param name="type">Type of event we are removing.</param>
         /// <param name="l">The listener that will not receive these events.</param>
-        public void RemoveListener(string type, GameEventListener l)
+        public void RemoveListener(string type, EntityEventListener l)
         {
             if (listeners.ContainsKey(type))
             {
@@ -69,13 +69,13 @@ namespace Blurift
 
     #region Sub Classes
 
-    public class GameEvent
+    public class EntityEvent
     {
         private Vector3 location;
 
-        public GameEvent() : this(Vector3.zero) { }
+        public EntityEvent() : this(Vector3.zero) { }
 
-        public GameEvent(Vector3 location)
+        public EntityEvent(Vector3 location)
         {
             this.location = location;
         }
@@ -86,9 +86,9 @@ namespace Blurift
         }
     }
 
-    public interface GameEventListener
+    public interface EntityEventListener
     {
-        void PushEvent(object sender, string type, GameEvent e);
+        void PushEvent(object sender, string type, EntityEvent e);
     }
     #endregion
 }

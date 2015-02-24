@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Blurift;
 
+[RequireComponent(typeof(EntityEventManager))]
 public class Health : MonoBehaviour 
 {
 	public enum State{Alive, Dead};
@@ -8,11 +10,15 @@ public class Health : MonoBehaviour
 	public float maxHealth;
 	public State isAlive;
 	// Use this for initialization
+
+    private EntityEventManager events;
+
 	void Start () 
 	{
 		isAlive = State.Alive;
 		health = maxHealth;
-	
+
+        events = GetComponent<EntityEventManager>();
 	}
 	public void ResetHealth()
 	{
@@ -30,6 +36,8 @@ public class Health : MonoBehaviour
 	public void TakeDamage(float damage)
 	{
 		health -= damage;
+
+        events.PushEvent(this, "HealthDamage", new EntityEvent(transform.position));
 	}
 	// Update is called once per frame
 	void Update () 
