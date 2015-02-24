@@ -431,6 +431,7 @@ GameObject:
   - 92: {fileID: 63278046}
   - 124: {fileID: 63278045}
   - 81: {fileID: 63278044}
+  - 114: {fileID: 63278049}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -503,6 +504,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &63278049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 63278043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74ab98b1a96e0354aa3d2ed4a28145d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  Smoothness: 5
+  ShakeAmount: 1
+  ShakeTime: .5
 --- !u!1001 &67558290
 Prefab:
   m_ObjectHideFlags: 0
@@ -3708,7 +3724,6 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -4606,7 +4621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 587546653fa152940b5e15d966290c2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveForce: 30
+  MoveForce: 35
   MaxRotation: 360
 --- !u!58 &936808987
 CircleCollider2D:
@@ -5161,6 +5176,10 @@ Prefab:
     - target: {fileID: 400000, guid: 0a4fef19a36e6204ea1557cf3264b0fc, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: 0a4fef19a36e6204ea1557cf3264b0fc, type: 2}
+      propertyPath: m_Interpolate
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a4fef19a36e6204ea1557cf3264b0fc, type: 2}

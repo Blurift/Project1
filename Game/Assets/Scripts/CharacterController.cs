@@ -5,6 +5,7 @@ using System.Collections;
 public class CharacterController : MonoBehaviour {
 
     MovementController moveController;
+    CameraController camera;
 	private float nextFire;
 	public GameObject shot;
 	public Transform shotSpawn; 
@@ -13,6 +14,8 @@ public class CharacterController : MonoBehaviour {
 
 	void Start () {
         moveController = GetComponent<MovementController>();
+        camera = FindObjectOfType<CameraController>();
+        camera.Target = transform;
 	}
 	
 	// Update is called once per frame
@@ -25,7 +28,6 @@ public class CharacterController : MonoBehaviour {
 				nextFire = Time.time + fireRate;
 				Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
 			}
-			Camera.main.transform.position = new Vector3 (transform.position.x, transform.position.y, -10);
 		}
 	}
 
