@@ -10,25 +10,10 @@ using System.Collections.Generic;
 namespace Blurift
 {
 
-    public class GameEventManager : MonoBehaviour
+    public class EntityEventManager : MonoBehaviour
     {
 
-        #region Instance
-        private static GameEventManager instance;
-        /* do not need at the moment
-        public static GameEventManager Instance
-        {
-            get { return instance; }
-        }
-         */
-        #endregion
-
         private Dictionary<string, List<GameEventListener>> listeners = new Dictionary<string, List<GameEventListener>>();
-
-        void Awake()
-        {
-            instance = this;
-        }
 
         #region PushEvent
 
@@ -38,12 +23,7 @@ namespace Blurift
         /// <param name="e">The event object</param>
         /// <param name="type">The type of event it is</param>
         /// <param name="sender">The object sending the event</param>
-        public static void PushEvent(object sender, string type, GameEvent e)
-        {
-            instance.PushEventLocal(sender, type, e);
-        }
-
-        private void PushEventLocal(object sender, string type, GameEvent e)
+        public void PushEvent(object sender, string type, GameEvent e)
         {
             if (listeners.ContainsKey(type))
             {
@@ -61,12 +41,7 @@ namespace Blurift
         /// </summary>
         /// <param name="type">The type of event to listen for.</param>
         /// <param name="l">The listener that will be notified of events.</param>
-        public static void AddListener(string type, GameEventListener l)
-        {
-            instance.AddListenerLocal(type, l);
-        }
-
-        private void AddListenerLocal(string type, GameEventListener l)
+        public void AddListener(string type, GameEventListener l)
         {
             if (!listeners.ContainsKey(type))
                 listeners[type] = new List<GameEventListener>();
@@ -80,12 +55,7 @@ namespace Blurift
         /// </summary>
         /// <param name="type">Type of event we are removing.</param>
         /// <param name="l">The listener that will not receive these events.</param>
-        public static void RemoveListener(string type, GameEventListener l)
-        {
-            instance.RemoveListenerLocal(type, l);
-        }
-
-        private void RemoveListenerLocal(string type, GameEventListener l)
+        public void RemoveListener(string type, GameEventListener l)
         {
             if (listeners.ContainsKey(type))
             {
