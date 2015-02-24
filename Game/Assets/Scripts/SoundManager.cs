@@ -34,7 +34,7 @@ public class SoundManager : MonoBehaviour {
 
 	public void PlayIt(AudioClip sound, bool loop, Vector3 position)
 	{
-		if (freeSources [0] == null) 
+		if (freeSources.Count == 0) 
 		{
 
 			freeSources.Add(gameObject.AddComponent<AudioSource>());  
@@ -55,8 +55,9 @@ public class SoundManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		foreach (AudioSource audio in activeSources) 
+		for (int i=activeSources.Count - 1; i> -1; i--) 
 		{
+			AudioSource audio = activeSources[i];
 			if (!audio.isPlaying)
 			{
 				audio.transform.position = this.transform.position;
@@ -64,6 +65,7 @@ public class SoundManager : MonoBehaviour {
 				activeSources.Remove(audio);
 			}
 		}
+	
 	
 	}
 }
