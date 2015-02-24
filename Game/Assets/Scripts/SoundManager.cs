@@ -22,8 +22,6 @@ public class SoundManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		freeSources.Capacity = audioPoolSize;
-		activeSources.Capacity = audioPoolSize;
 		for (int i = 0; i < audioPoolSize; i++)
 		{
 			GameObject go = new GameObject("audio");
@@ -36,26 +34,22 @@ public class SoundManager : MonoBehaviour {
 
 	public void PlayIt(AudioClip sound, bool loop, Vector3 position)
 	{
-		
-		foreach (AudioSource audio in freeSources) 
+		if (freeSources [0] == null) 
 		{
-			if (!audio.isPlaying)
-			{
-				audio.transform.position = position;
-				audio.loop = loop;
-				audio.clip = sound;
-				activeSources.Add(audio);
-				freeSources.Remove(audio);
-				audio.Play();
-				return;
-			}
+
+			freeSources.Add(gameObject.AddComponent<AudioSource>());  
+			freeSources[freeSources.Count - 1].loop = loop;
+			freeSources[freeSources.Count-1].clip = sound;
+			freeSources[freeSources.Count-1].Play();
 		}
-		
-		freeSources.Add(gameObject.AddComponent<AudioSource>());  
-		freeSources[freeSources.Count - 1].loop = loop;
-		freeSources[freeSources.Count-1].clip = sound;
-		freeSources[freeSources.Count-1].Play();
-		
+		freeSources [0].transform.position = position;
+		freeSources [0].loop = loop;
+		freeSources [0].clip = sound;
+		activeSources.Add(freeSources [0]);
+		freeSources [0].Play();
+		freeSources.RemoveAt(0);
+
+
 	} 
 	
 	// Update is called once per frame
