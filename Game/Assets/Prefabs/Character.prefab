@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shot: {fileID: 175142, guid: 1d5535441ef59c044b06dd60600627c3, type: 2}
   shotSpawn: {fileID: 400002}
-  fireRate: .5
+  fireRate: .300000012
   fireSound: {fileID: 8300000, guid: 7b26c51a3fcbada41ac3f348f472739f, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -115,7 +115,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveForce: 35
-  MaxRotation: 360
+  MaxRotation: 720
+  FootstepSounds:
+  - {fileID: 8300000, guid: 52db9a51a1de1584bbde158ed439dc3d, type: 3}
+  - {fileID: 8300000, guid: 2baaa843a6abf76469eeb9c4ea48bb6f, type: 3}
+  - {fileID: 8300000, guid: 827dbe2adcd2fb44391714a82a093927, type: 3}
+  - {fileID: 8300000, guid: 65fdb6b976386814b84fc03bdb933809, type: 3}
+  FootstepFreq: .5
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

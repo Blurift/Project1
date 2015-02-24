@@ -73,7 +73,6 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
-    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1 &2234521
 GameObject:
@@ -3725,8 +3724,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  ignoreReversedGraphics: 1
+  blockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -4589,6 +4588,7 @@ GameObject:
   - 58: {fileID: 936808987}
   - 114: {fileID: 936808986}
   - 114: {fileID: 936808985}
+  - 114: {fileID: 936808991}
   m_Layer: 10
   m_Name: Character
   m_TagString: Player
@@ -4637,6 +4637,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveForce: 35
   MaxRotation: 360
+  FootstepSounds:
+  - {fileID: 8300000, guid: 52db9a51a1de1584bbde158ed439dc3d, type: 3}
+  - {fileID: 8300000, guid: 2baaa843a6abf76469eeb9c4ea48bb6f, type: 3}
+  - {fileID: 8300000, guid: 827dbe2adcd2fb44391714a82a093927, type: 3}
+  - {fileID: 8300000, guid: 65fdb6b976386814b84fc03bdb933809, type: 3}
+  FootstepFreq: .5
 --- !u!58 &936808987
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4704,6 +4710,18 @@ SpriteRenderer:
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 5a61ef677ec6de341991f3a3432b23a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &936808991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11493196, guid: 0a4fef19a36e6204ea1557cf3264b0fc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1007216073}
+  m_GameObject: {fileID: 936808983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ad49b9075285543bdffc030bd63d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &940565549
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ GameObject:
   - 58: {fileID: 5800000}
   - 114: {fileID: 11422772}
   m_Layer: 8
-  m_Name: Enemy
+  m_Name: EnemyManiac
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,6 +85,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveForce: 10
   MaxRotation: 360
+  FootstepSounds:
+  - {fileID: 8300000, guid: 52db9a51a1de1584bbde158ed439dc3d, type: 3}
+  - {fileID: 8300000, guid: 2baaa843a6abf76469eeb9c4ea48bb6f, type: 3}
+  - {fileID: 8300000, guid: 827dbe2adcd2fb44391714a82a093927, type: 3}
+  - {fileID: 8300000, guid: 65fdb6b976386814b84fc03bdb933809, type: 3}
+  FootstepFreq: .300000012
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
