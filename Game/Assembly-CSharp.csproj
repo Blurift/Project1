@@ -49,12 +49,12 @@
      <Compile Include="Assets\Scripts\AI\AI.cs" />
      <Compile Include="Assets\Scripts\AI\AIManager.cs" />
      <Compile Include="Assets\Scripts\Blurift\EntityEventManager.cs" />
-     <Compile Include="Assets\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Scripts\CharacterController.cs" />
+     <Compile Include="Assets\Scripts\Character\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Character\CharacterController.cs" />
+     <Compile Include="Assets\Scripts\Character\Health.cs" />
+     <Compile Include="Assets\Scripts\Character\MovementController.cs" />
      <Compile Include="Assets\Scripts\DeathScreen.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Scripts\Health.cs" />
-     <Compile Include="Assets\Scripts\MovementController.cs" />
      <Compile Include="Assets\Scripts\OnClick.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />
