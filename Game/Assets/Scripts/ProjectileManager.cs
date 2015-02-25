@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ProjectileManager : MonoBehaviour {
-	private static ProjectileManager _instance;
+public class ProjectileManager : MonoBehaviour
+{
+
+    #region Singleton Code
+    private static ProjectileManager _instance;
 	public static ProjectileManager Instance
 	{
 		get
@@ -14,8 +17,9 @@ public class ProjectileManager : MonoBehaviour {
 			return _instance;
 		}
 	}
+    #endregion
 
-	private Projectile[] projPool;
+    private Projectile[] projPool;
 	public int PoolSize = 10;
 	public GameObject ShotPrefab;
 	// Use this for initialization
@@ -32,11 +36,13 @@ public class ProjectileManager : MonoBehaviour {
 		}
 	
 	}
+
 	public void ProjHit(Projectile proj)
 	{
 		proj.gameObject.SetActive(false);
 
 	}
+
 	public void CreateProj(Transform spawnPoint)
 	{
 		int index = -1;
