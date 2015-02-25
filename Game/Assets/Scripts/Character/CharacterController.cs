@@ -34,7 +34,8 @@ public class CharacterController : MonoBehaviour, EntityEventListener  {
 			{
 				SoundManager.Instance.PlayIt(fireSound, false, transform.position);
 				nextFire = Time.time + fireRate;
-				Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+				ProjectileManager.Instance.CreateProj(shotSpawn);
+				//Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
 			}
 		}
 	}

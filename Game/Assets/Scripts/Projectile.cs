@@ -14,6 +14,11 @@ public class Projectile : MonoBehaviour
 	{
 
 	}
+	public void UpdateSpeed()
+	{
+
+		rigidbody2D.AddForce (transform.up * speed);
+	}
 	void OnTriggerEnter2D(Collider2D other) 
 	{
 		if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
@@ -25,7 +30,8 @@ public class Projectile : MonoBehaviour
 			other.gameObject.GetComponent<Health> ().TakeDamage (damage);
 
 		} 
-		Destroy(gameObject);
+		ProjectileManager.Instance.ProjHit (this);
+		//Destroy(gameObject);
 	}
 		
 

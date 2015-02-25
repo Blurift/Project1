@@ -73,6 +73,7 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
+    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1 &2234521
 GameObject:
@@ -2200,6 +2201,10 @@ Prefab:
       propertyPath: deathScreen
       value: 
       objectReference: {fileID: 169972, guid: ca6b72232f7190549a3f9fc948337502, type: 2}
+    - target: {fileID: 11400000, guid: a760172cb3adc4445b47df0554d58549, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a760172cb3adc4445b47df0554d58549, type: 2}
   m_RootGameObject: {fileID: 797743645}
@@ -3724,8 +3729,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -4090,6 +4095,7 @@ GameObject:
   - 114: {fileID: 797743646}
   - 114: {fileID: 797743648}
   - 114: {fileID: 797743649}
+  - 114: {fileID: 797743650}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -4152,6 +4158,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioPoolSize: 10
+--- !u!114 &797743650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 797743645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64384928cd771654cb1ff823e0a0880f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PoolSize: 10
+  ShotPrefab: {fileID: 175142, guid: 1d5535441ef59c044b06dd60600627c3, type: 2}
 --- !u!1 &823475963
 GameObject:
   m_ObjectHideFlags: 0
@@ -4636,7 +4655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveForce: 35
-  MaxRotation: 360
+  MaxRotation: 720
   FootstepSounds:
   - {fileID: 8300000, guid: 52db9a51a1de1584bbde158ed439dc3d, type: 3}
   - {fileID: 8300000, guid: 2baaa843a6abf76469eeb9c4ea48bb6f, type: 3}
@@ -4685,7 +4704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shot: {fileID: 175142, guid: 1d5535441ef59c044b06dd60600627c3, type: 2}
   shotSpawn: {fileID: 761838517}
-  fireRate: .5
+  fireRate: .300000012
   fireSound: {fileID: 8300000, guid: 7b26c51a3fcbada41ac3f348f472739f, type: 3}
 --- !u!212 &936808990
 SpriteRenderer:
