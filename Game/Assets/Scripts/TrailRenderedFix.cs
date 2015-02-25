@@ -12,7 +12,7 @@ public class TrailRenderedFix : MonoBehaviour {
 
 	void OnEnable()
     {
-        Debug.Log("Enabled");
+        if(trail != null)
         StartCoroutine(ResetTrail());
     }
 
