@@ -46,7 +46,7 @@ public class CameraController : MonoBehaviour {
 
             shakePos = Vector3.Lerp(shakePos, shakeOffset, Time.deltaTime);
         }
-        else if (shakePos != Vector3.zero) ;
+        else if (shakePos != Vector3.zero)
             shakePos = Vector3.Lerp(shakePos, Vector3.zero, Time.deltaTime);
 	}
 

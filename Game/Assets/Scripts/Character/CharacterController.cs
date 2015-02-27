@@ -32,7 +32,7 @@ public class CharacterController : MonoBehaviour, EntityEventListener  {
 		{
 			if (Input.GetButton ("Fire1") && Time.time > nextFire) 
 			{
-				SoundManager.Instance.PlayIt(fireSound, false, transform.position);
+				SoundManager.Instance.Play(fireSound, false, transform.position);
 				nextFire = Time.time + fireRate;
 				ProjectileManager.Instance.CreateProj(shotSpawn);
 				//Instantiate (shot, shotSpawn.position, shotSpawn.rotation);

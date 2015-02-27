@@ -23,7 +23,7 @@ public class MovementController : MonoBehaviour {
         {
             int rfi = Random.Range(0,FootstepSounds.Length); //Random Footstep Index
 
-            SoundManager.Instance.PlayIt(FootstepSounds[rfi], false, transform.position);
+            SoundManager.Instance.Play(FootstepSounds[rfi], false, transform.position);
 
             nextFootstep = Time.time + FootstepFreq;
         }

@@ -18,26 +18,20 @@ public class SoundManager : MonoBehaviour {
 	}
 	private List<AudioSource> freeSources = new List<AudioSource>();
 	private List<AudioSource> activeSources = new List<AudioSource>(); 
-	public int audioPoolSize = 10;
+
+    public GameObject AudioSourcePrefab;
+
 	// Use this for initialization
 	void Start () 
-	{
-		for (int i = 0; i < audioPoolSize; i++)
-		{
-			GameObject go = new GameObject("audio");
-			go.AddComponent<AudioSource>();
-
-			freeSources.Add(go.GetComponent<AudioSource>());
-		}
-	
+	{	
 	}
 
-	public void PlayIt(AudioClip sound, bool loop, Vector3 position)
+	public void Play(AudioClip sound, bool loop, Vector3 position)
 	{
 		if (freeSources.Count == 0) 
 		{
-
-			freeSources.Add(gameObject.AddComponent<AudioSource>());  
+            GameObject source = (GameObject)Instantiate(AudioSourcePrefab);
+			freeSources.Add(source.GetComponent<AudioSource>());  
 			freeSources[freeSources.Count - 1].loop = loop;
 			freeSources[freeSources.Count-1].clip = sound;
 			freeSources[freeSources.Count-1].Play();
