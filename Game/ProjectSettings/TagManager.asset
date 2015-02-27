@@ -57,7 +57,11 @@ TagManager:
     userID: 2
     uniqueID: 3917574373
     locked: 0
-  - name: Effects
+  - name: Upper
     userID: 1
     uniqueID: 3236244133
+    locked: 0
+  - name: Effects
+    userID: 5
+    uniqueID: 2318153951
     locked: 0

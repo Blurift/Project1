@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Character\Health.cs" />
      <Compile Include="Assets\Scripts\Character\MovementController.cs" />
      <Compile Include="Assets\Scripts\DeathScreen.cs" />
+     <Compile Include="Assets\Scripts\EffectBehaviour.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\OnClick.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />

@@ -11,6 +11,8 @@ public class Health : MonoBehaviour
 	public State isAlive;
 	// Use this for initialization
 
+    public GameObject OnHitEffect;
+
     private EntityEventManager events;
 
 	void Start () 
@@ -38,6 +40,9 @@ public class Health : MonoBehaviour
 		health -= damage;
 
         events.PushEvent(this, "HealthDamage", new EntityEvent(transform.position));
+
+        if(OnHitEffect != null)
+            Instantiate(OnHitEffect, transform.position, Quaternion.identity);
 	}
 	// Update is called once per frame
 	void Update () 
@@ -50,7 +55,6 @@ public class Health : MonoBehaviour
 		if (health <= 0)
 		{
 			isAlive = State.Dead;
-		
 		}
 	
 	}

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Blurift;
 
 [RequireComponent(typeof(MovementController))]
 public class AI : MonoBehaviour {
@@ -7,6 +8,7 @@ public class AI : MonoBehaviour {
     private GameObject target;
 	public int scoreValue;
     private MovementController movement;
+    //private EntityEventManager events;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +17,7 @@ public class AI : MonoBehaviour {
 
     public void Initialize()
     {
+
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
         float distance = float.MaxValue;

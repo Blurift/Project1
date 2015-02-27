@@ -135,6 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 25
   isAlive: 0
+  OnHitEffect: {fileID: 100000, guid: 3a18f21101ca2ee48833771407afe8cc, type: 2}
 --- !u!114 &11493196
 MonoBehaviour:
   m_ObjectHideFlags: 1
