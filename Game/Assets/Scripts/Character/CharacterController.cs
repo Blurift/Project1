@@ -7,11 +7,8 @@ public class CharacterController : MonoBehaviour, EntityEventListener  {
 
     MovementController moveController;
     CameraController camera;
-	private float nextFire;
 	public GameObject shot;
-	public Transform shotSpawn; 
-	public float fireRate;
-	public AudioClip fireSound;
+	public Weapon currentGun;
 	// Use this for initialization
 
     private EntityEventManager events;
@@ -30,11 +27,23 @@ public class CharacterController : MonoBehaviour, EntityEventListener  {
 	{
 		if (gameObject.GetComponent<Health>().isAlive == Health.State.Alive) 
 		{
-			if (Input.GetButton ("Fire1") && Time.time > nextFire) 
+			if (Input.GetKey(KeyCode.R))
 			{
-				SoundManager.Instance.Play(fireSound, false, transform.position);
-				nextFire = Time.time + fireRate;
-				ProjectileManager.Instance.CreateProj(shotSpawn);
+				currentGun.Reload();
+			}
+			if (Input.GetButton ("Fire1")) 
+			{
+				if (!(currentGun.CheckForReload()))
+				{
+
+				}
+				else
+				{
+					currentGun.Fire();
+
+				}
+				
+
 				//Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
 			}
 		}
