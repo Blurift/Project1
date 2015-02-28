@@ -472,7 +472,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3721,6 +3721,7 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -4726,9 +4727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shot: {fileID: 175142, guid: 1d5535441ef59c044b06dd60600627c3, type: 2}
-  shotSpawn: {fileID: 761838517}
-  fireRate: .300000012
-  fireSound: {fileID: 8300000, guid: 7b26c51a3fcbada41ac3f348f472739f, type: 3}
+  currentGun: {fileID: 0}
 --- !u!212 &936808990
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5229,8 +5228,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 982171267}
   - 20: {fileID: 982171266}
-  - 124: {fileID: 982171265}
-  - 92: {fileID: 982171264}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -5238,20 +5235,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!92 &982171264
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 982171262}
-  m_Enabled: 1
---- !u!124 &982171265
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 982171262}
-  m_Enabled: 1
 --- !u!20 &982171266
 Camera:
   m_ObjectHideFlags: 0
@@ -5260,19 +5243,19 @@ Camera:
   m_GameObject: {fileID: 982171262}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_ClearFlags: 4
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: .699999988
+    x: .800000012
     y: 0
-    width: .300000012
-    height: .300000012
+    width: .200000003
+    height: .200000003
   near clip plane: .300000012
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 12
+  orthographic size: 15
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
