@@ -15,22 +15,23 @@ namespace Maniac
 
         //Pathfinding
         private Seeker seeker;
-        private float waypointPadding;
+        private float waypointPadding = 2;
         private int currentWaypoint = 0;
         private Vector3 targetPosition;
         private Path path;
+        private float nextPathReset = 0;
 
         // Use this for initialization
         void Start()
         {
             movement = GetComponent<MovementController>();
-            
+            seeker = GetComponent<Seeker>();
+            seeker.pathCallback += OnPathComplete;
         }
 
         public void Initialize()
         {
-            seeker = GetComponent<Seeker>();
-            seeker.pathCallback += OnPathComplete;
+            
 
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
@@ -48,7 +49,7 @@ namespace Maniac
                 }
             }
 
-            seeker.StartPath(transform.position, target.transform.position);
+            
         }
 
         // Update is called once per frame
@@ -65,14 +66,36 @@ namespace Maniac
 
             float distance = Vector2.Distance(transform.position, target.transform.position);
 
-            movement.MoveForward();
-            movement.RotateTowards(target.transform.position);
+            
 
             if(distance < 3)
             {
-                
+                movement.MoveForward();
+                movement.RotateTowards(target.transform.position);
                 return;
             }
+
+            if (Time.time > nextPathReset)
+            {
+                seeker.StartPath(transform.position, target.transform.position);
+                nextPathReset = Time.time + 4;
+            }
+
+            if (path == null)
+                return;
+
+            if (currentWaypoint >= path.vectorPath.Count)
+            {
+                seeker.StartPath(transform.position, target.transform.position);
+                nextPathReset = Time.time + 4;
+                return;
+            }
+
+            movement.MoveForward();
+            movement.RotateTowards(path.vectorPath[currentWaypoint]);
+
+            if (Vector2.Distance(transform.position, path.vectorPath[currentWaypoint]) < waypointPadding)
+                currentWaypoint++;
         }
 
         void OnCollisionEnter2D(Collision2D col)
