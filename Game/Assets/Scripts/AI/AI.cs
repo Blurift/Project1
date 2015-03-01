@@ -24,12 +24,13 @@ namespace Maniac
         void Start()
         {
             movement = GetComponent<MovementController>();
-            seeker = GetComponent<Seeker>();
-            seeker.pathCallback += OnPathComplete;
+            
         }
 
         public void Initialize()
         {
+            seeker = GetComponent<Seeker>();
+            seeker.pathCallback += OnPathComplete;
 
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
