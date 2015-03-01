@@ -9,76 +9,82 @@
 using UnityEngine;
 using System.Collections;
 
-[AddComponentMenu("EffectSystem/BehaviourAll")]
-public class EffectBehaviour : MonoBehaviour {
+namespace Maniac
+{
+    [AddComponentMenu("EffectSystem/BehaviourAll")]
+    public class EffectBehaviour : MonoBehaviour
+    {
 
-	public float FadeTime;
-	public float LightPosition = 1;
+        public float FadeTime;
+        public float LightPosition = 1;
 
-	private float startTime;
-	private float startIntensity;
+        private float startTime;
+        private float startIntensity;
 
-	public string SortLayer = "";
+        public string SortLayer = "";
 
-    public bool StopEmmitingOnNoParent = false;
+        public bool StopEmmitingOnNoParent = false;
 
-    //private Light light;
-    //private ParticleSystem particleSystem;
+        //private Light light;
+        //private ParticleSystem particleSystem;
 
-	// Use this for initialization                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-	void Start () {
-		startTime = Time.time;
-
-		if(light != null)
-		{
-			startIntensity = light.intensity;
-			transform.position = new Vector3(transform.position.x, transform.position.y, LightPosition*-1);
-		}
-
-		if(renderer != null)
-			renderer.sortingLayerName = SortLayer;
-
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		bool stop = true;
-
-		if(particleSystem != null)
-		{
-            if(StopEmmitingOnNoParent)
-            {
-                if(transform.parent == null)
-                {
-                    //particleSystem.enableEmission = false;
-                    particleSystem.Stop();
-                }
-            }
-			if(particleSystem.isPlaying)
-				stop = false;
-		}
-
-        if(particleEmitter != null)
+        // Use this for initialization                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+        void Start()
         {
-            stop = false;
+            startTime = Time.time;
+
+            if (light != null)
+            {
+                startIntensity = light.intensity;
+                transform.position = new Vector3(transform.position.x, transform.position.y, LightPosition * -1);
+            }
+
+            if (renderer != null)
+                renderer.sortingLayerName = SortLayer;
+
+
         }
 
-		if(light != null)
-		{
-			light.intensity = startIntensity * ((FadeTime - (Time.time - startTime)) / FadeTime);
-			if(light.intensity < 0)
-				light.intensity = 0;
-			
-			if(Time.time - startTime <= FadeTime)
-			{
-				stop = false;
-			}
-		}
+        // Update is called once per frame
+        void Update()
+        {
+            bool stop = true;
 
-		if(stop)
-		{
-			Destroy(gameObject);
-		}
-	}
+            if (particleSystem != null)
+            {
+                if (StopEmmitingOnNoParent)
+                {
+                    if (transform.parent == null)
+                    {
+                        //particleSystem.enableEmission = false;
+                        particleSystem.Stop();
+                    }
+                }
+                if (particleSystem.isPlaying)
+                    stop = false;
+            }
+
+            if (particleEmitter != null)
+            {
+                stop = false;
+            }
+
+            if (light != null)
+            {
+                light.intensity = startIntensity * ((FadeTime - (Time.time - startTime)) / FadeTime);
+                if (light.intensity < 0)
+                    light.intensity = 0;
+
+                if (Time.time - startTime <= FadeTime)
+                {
+                    stop = false;
+                }
+            }
+
+            if (stop)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 }

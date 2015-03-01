@@ -1,101 +1,106 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AIManager : MonoBehaviour {
-
-    private static AIManager _instance;
-    public static AIManager Instance
+namespace Maniac
+{
+    public class AIManager : MonoBehaviour
     {
-        get
+
+        private static AIManager _instance;
+        public static AIManager Instance
         {
-            if (_instance == null)
+            get
             {
-                _instance = FindObjectOfType<AIManager>();
-            }
-            return _instance;
-        }
-    }
-
-    private AI[] aiPool;
-    public int PoolSize = 10;
-    public GameObject AIPrefab;
-
-    public float SpawnFrequency = 2;
-    private float nextSpawn = 0;
-
-    private GameObject[] spawns;
-	private GameManager gameManager;
-
-	// Use this for initialization
-	void Start ()
-    {
-        gameManager = GetComponent<GameManager>();
-	    if(AIPrefab != null)
-        {
-            aiPool = new AI[PoolSize];
-            for (int i = 0; i < PoolSize; i++)
-            {
-                aiPool[i] = ((GameObject)Instantiate(AIPrefab)).GetComponent<AI>();
-                aiPool[i].gameObject.SetActive(false);
+                if (_instance == null)
+                {
+                    _instance = FindObjectOfType<AIManager>();
+                }
+                return _instance;
             }
         }
 
-        spawns = GameObject.FindGameObjectsWithTag("EnemySpawn");
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	    if(Time.time > nextSpawn)
-        {
-            if(spawns.Length > 0)
-            {
-                //Get the index of the spawn to spawn the enemy at.
-                int rIndex = Random.Range(0, spawns.Length);
-                int index = -1;
+        private AI[] aiPool;
+        public int PoolSize = 10;
+        public GameObject AIPrefab;
 
+        public float SpawnFrequency = 2;
+        private float nextSpawn = 0;
+
+        private GameObject[] spawns;
+        private GameManager gameManager;
+
+        // Use this for initialization
+        void Start()
+        {
+            gameManager = GetComponent<GameManager>();
+            if (AIPrefab != null)
+            {
+                aiPool = new AI[PoolSize];
                 for (int i = 0; i < PoolSize; i++)
                 {
-                    if (!aiPool[i].gameObject.activeSelf)
-                        index = i;
-                }
-
-                if(index != -1)
-                {
-                    aiPool[index].transform.position = spawns[rIndex].transform.position;
-                    aiPool[index].gameObject.SetActive(true);
-					aiPool[index].gameObject.GetComponent<Health>().ResetHealth();
-                    aiPool[index].Initialize();
+                    aiPool[i] = ((GameObject)Instantiate(AIPrefab)).GetComponent<AI>();
+                    aiPool[i].gameObject.SetActive(false);
                 }
             }
 
-
-            nextSpawn = Time.time + SpawnFrequency;
+            spawns = GameObject.FindGameObjectsWithTag("EnemySpawn");
         }
-	}
 
-    public void Disable()
-    {
-        for (int i = 0; i < PoolSize; i++)
+        // Update is called once per frame
+        void Update()
         {
-            aiPool[i].gameObject.SetActive(false);
-            this.enabled = false;
+            if (Time.time > nextSpawn)
+            {
+                if (spawns.Length > 0)
+                {
+                    //Get the index of the spawn to spawn the enemy at.
+                    int rIndex = Random.Range(0, spawns.Length);
+                    int index = -1;
+
+                    for (int i = 0; i < PoolSize; i++)
+                    {
+                        if (!aiPool[i].gameObject.activeSelf)
+                            index = i;
+                    }
+
+                    if (index != -1)
+                    {
+                        aiPool[index].transform.position = spawns[rIndex].transform.position;
+                        aiPool[index].gameObject.SetActive(true);
+                        aiPool[index].gameObject.GetComponent<Health>().ResetHealth();
+                        aiPool[index].Initialize();
+                    }
+                }
+
+
+                nextSpawn = Time.time + SpawnFrequency;
+            }
         }
-    }
-	public void AIDying(AI ai)
-	{
-		gameManager.AddScore (ai.scoreValue);
-		ai.gameObject.SetActive(false);
-	}
-    public void AIHitTarget(GameObject target, AI ai)
-    {
-        Health h = target.GetComponent<Health>();
 
-        if(h != null)
+        public void Disable()
         {
-            h.TakeDamage(5);
+            for (int i = 0; i < PoolSize; i++)
+            {
+                aiPool[i].gameObject.SetActive(false);
+                this.enabled = false;
+            }
+        }
+        public void AIDying(AI ai)
+        {
+            gameManager.AddScore(ai.scoreValue);
             ai.gameObject.SetActive(false);
         }
+        public void AIHitTarget(GameObject target, AI ai)
+        {
+            Health h = target.GetComponent<Health>();
 
-        //TODO Make some sort of effect here.
+            if (h != null)
+            {
+                h.TakeDamage(5);
+                ai.gameObject.SetActive(false);
+            }
+
+            //TODO Make some sort of effect here.
+        }
     }
 }
