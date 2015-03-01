@@ -3,15 +3,22 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
-	public GameObject player;
 	public Text scoreText;
 	public GameObject AIManager;
 	public GameObject deathScreen;
 	private int score;
 	private bool isRunning = true;
+
+    public GameObject StartingWeapon;
+    public GameObject PlayerPrefab;
+    private CharacterController player;
+
 	// Use this for initialization
 	void Start () 
 	{
+        player = ((GameObject)Instantiate(PlayerPrefab, new Vector3(0, 0, 0), Quaternion.identity)).GetComponent<CharacterController>(); ;
+        player.SetWeapon(((GameObject)Instantiate(StartingWeapon)).GetComponent<Weapon>());
+
 		score = 0;
 		UpdateScore ();
 	}

@@ -56,10 +56,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91a722c6f0f8fcc4bbd6b83347cf9daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   scoreText: {fileID: 0}
   AIManager: {fileID: 100000}
   deathScreen: {fileID: 169972, guid: ca6b72232f7190549a3f9fc948337502, type: 2}
+  StartingWeapon: {fileID: 100000, guid: d9b31c1a41940a94595f465432e4388d, type: 2}
+  PlayerPrefab: {fileID: 100000, guid: 0a4fef19a36e6204ea1557cf3264b0fc, type: 2}
 --- !u!114 &11411814
 MonoBehaviour:
   m_ObjectHideFlags: 1

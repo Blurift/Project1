@@ -7,6 +7,8 @@ public class Weapon : MonoBehaviour {
 	public AudioClip fireSound;
 	private float nextFire;
 	public float fireRate;
+
+    public GameObject MuzzleFlashPrefab;
 	// Use this for initialization
 	void Start () 
 	{
@@ -21,6 +23,11 @@ public class Weapon : MonoBehaviour {
 			SoundManager.Instance.Play(fireSound, false, transform.position);
 			nextFire = Time.time + fireRate;
 			ProjectileManager.Instance.CreateProj(this.transform);
+
+            if(MuzzleFlashPrefab != null)
+            {
+                Instantiate(MuzzleFlashPrefab, transform.position, Quaternion.Euler(transform.up));
+            }
 		}
 	}
 	public bool CheckForReload()

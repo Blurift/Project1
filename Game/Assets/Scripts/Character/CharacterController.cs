@@ -8,8 +8,10 @@ public class CharacterController : MonoBehaviour, EntityEventListener  {
     MovementController moveController;
     CameraController camera;
 	public GameObject shot;
-	public Weapon currentGun;
-	// Use this for initialization
+
+	private Weapon currentWeapon;
+
+    public Transform WeaponPlacement;
 
     private EntityEventManager events;
 
@@ -29,17 +31,17 @@ public class CharacterController : MonoBehaviour, EntityEventListener  {
 		{
 			if (Input.GetKey(KeyCode.R))
 			{
-				currentGun.Reload();
+				currentWeapon.Reload();
 			}
 			if (Input.GetButton ("Fire1")) 
 			{
-				if (!(currentGun.CheckForReload()))
+				if (!(currentWeapon.CheckForReload()))
 				{
 
 				}
 				else
 				{
-					currentGun.Fire();
+					currentWeapon.Fire();
 
 				}
 				
@@ -73,5 +75,13 @@ public class CharacterController : MonoBehaviour, EntityEventListener  {
                 camera.Shake();
                 break;
         }
+    }
+
+    public void SetWeapon(Weapon weapon)
+    {
+        currentWeapon = weapon;
+        currentWeapon.transform.SetParent(WeaponPlacement);
+        currentWeapon.transform.localPosition = new Vector3(0, 0, 0);
+        currentWeapon.transform.localRotation = Quaternion.identity;
     }
 }

@@ -6,6 +6,8 @@ public class Projectile : MonoBehaviour
 	public float speed;
 	public float damage;
 
+    public GameObject HitEffectPrefab;
+
 	void Start ()
 	{
 		rigidbody2D.AddForce (transform.up * speed);
@@ -18,7 +20,6 @@ public class Projectile : MonoBehaviour
 
 	public void UpdateSpeed()
 	{
-
 		rigidbody2D.AddForce (transform.up * speed);
 	}
 
@@ -34,7 +35,13 @@ public class Projectile : MonoBehaviour
 
 		} 
 		ProjectileManager.Instance.ProjHit (this);
-		//Destroy(gameObject);
+
+        if (HitEffectPrefab != null)
+        {
+            GameObject t = (GameObject)Instantiate(HitEffectPrefab, transform.position, Quaternion.identity);
+            t.transform.localRotation = Quaternion.LookRotation(transform.up * -1);
+        }
+
 	}
 		
 
