@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Maniac
 {
@@ -26,7 +27,7 @@ namespace Maniac
         public float SpawnFrequency = 2;
         private float nextSpawn = 0;
 
-        private GameObject[] spawns;
+        private List<AISpawner> spawners = new List<AISpawner>();
         private GameManager gameManager;
 
         // Use this for initialization
@@ -43,7 +44,11 @@ namespace Maniac
                 }
             }
 
-            spawns = GameObject.FindGameObjectsWithTag("EnemySpawn");
+            GameObject[] spawns = GameObject.FindGameObjectsWithTag("EnemySpawn");
+            for (int i = 0; i < spawns.Length; i++)
+            {
+                spawners.Add(spawns[i].GetComponent<AISpawner>());
+            }
         }
 
         // Update is called once per frame
@@ -51,10 +56,10 @@ namespace Maniac
         {
             if (Time.time > nextSpawn)
             {
-                if (spawns.Length > 0)
+                if (spawners.Count > 0)
                 {
                     //Get the index of the spawn to spawn the enemy at.
-                    int rIndex = Random.Range(0, spawns.Length);
+                    int rIndex = Random.Range(0, spawners.Count);
                     int index = -1;
 
                     for (int i = 0; i < PoolSize; i++)
@@ -65,7 +70,7 @@ namespace Maniac
 
                     if (index != -1)
                     {
-                        aiPool[index].transform.position = spawns[rIndex].transform.position;
+                        aiPool[index].transform.position = spawners[rIndex].transform.position;
                         aiPool[index].gameObject.SetActive(true);
                         aiPool[index].gameObject.GetComponent<Health>().ResetHealth();
                         aiPool[index].Initialize();
@@ -90,6 +95,20 @@ namespace Maniac
             gameManager.AddScore(ai.scoreValue);
             ai.gameObject.SetActive(false);
         }
+
+        public void SpawnerDied(AISpawner spawner)
+        {
+            spawners.Remove(spawner);
+        }
+
+        public void SetSpawnersInvincible(bool state)
+        {
+            for (int i = 0; i < spawners.Count; i++)
+            {
+                spawners[i].Invincible = state;
+            }
+        }
+
         public void AIHitTarget(GameObject target, AI ai)
         {
             Health h = target.GetComponent<Health>();

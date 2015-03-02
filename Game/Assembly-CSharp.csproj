@@ -111,6 +111,7 @@
      <Compile Include="Assets\AstarPathfindingProject\changelog.cs" />
      <Compile Include="Assets\Scripts\AI\AI.cs" />
      <Compile Include="Assets\Scripts\AI\AIManager.cs" />
+     <Compile Include="Assets\Scripts\AISpawner.cs" />
      <Compile Include="Assets\Scripts\Blurift\EntityEventManager.cs" />
      <Compile Include="Assets\Scripts\Character\CameraController.cs" />
      <Compile Include="Assets\Scripts\Character\CharacterController.cs" />

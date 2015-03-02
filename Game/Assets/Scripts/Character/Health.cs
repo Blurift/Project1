@@ -56,7 +56,11 @@ namespace Maniac
 
             if (health <= 0)
             {
-                isAlive = State.Dead;
+                if (isAlive == State.Alive)
+                {
+                    events.PushEvent(this, "HealthDead", new EntityEvent(transform.position));
+                    isAlive = State.Dead;
+                }
             }
 
         }
