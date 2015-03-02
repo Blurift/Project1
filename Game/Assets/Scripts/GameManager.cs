@@ -6,6 +6,7 @@ namespace Maniac
 {
     public class GameManager : MonoBehaviour
     {
+		public Text ammoText;
         public Text scoreText;
         public GameObject AIManager;
         public GameObject deathScreen;
@@ -29,6 +30,10 @@ namespace Maniac
         {
             scoreText.text = "Score: " + score;
         }
+		public void SetAmmo(float currentAmmo, float maxAmmo)
+		{
+			ammoText.text = currentAmmo + "/" + maxAmmo;
+		}
         public void AddScore(int newScoreValue)
         {
             score += newScoreValue;

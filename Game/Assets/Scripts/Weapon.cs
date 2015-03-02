@@ -9,13 +9,16 @@ namespace Maniac
         private int currentAmmo;
         public AudioClip fireSound;
         private float nextFire;
+		private float reserveAmmo;
         public float fireRate;
-
         public GameObject MuzzleFlashPrefab;
+		private GameManager gameManager;
         // Use this for initialization
         void Start()
         {
             currentAmmo = clipSize;
+			gameManager = GameObject.Find ("Managers").GetComponent<GameManager> ();
+			UpdateAmmo ();
 
         }
         public void Fire()
@@ -23,6 +26,8 @@ namespace Maniac
             if (Time.time > nextFire)
             {
                 currentAmmo -= 1;
+				reserveAmmo = clipSize - currentAmmo;
+				UpdateAmmo ();
                 SoundManager.Instance.Play(fireSound, false, transform.position);
                 nextFire = Time.time + fireRate;
                 ProjectileManager.Instance.CreateProj(this.transform);
@@ -41,9 +46,29 @@ namespace Maniac
             }
             return true;
         }
+		private void UpdateAmmo()
+		{
+			gameManager.SetAmmo(currentAmmo,clipSize);
+		}
+		public float GetMaxAmmo()
+		{
+			return clipSize;
+		}
+
+		public float GetAmmo()
+		{
+			return currentAmmo;
+		}
+
+		public float GetReserveAmmo()
+		{
+			return reserveAmmo;
+		}
+
         public void Reload()
         {
             currentAmmo = clipSize;
+			UpdateAmmo ();
         }
         // Update is called once per frame
         void Update()

@@ -10,7 +10,7 @@ namespace Maniac
 
         MovementController moveController;
         CameraController camera;
-        public GameObject shot;
+       
 
         private Weapon currentWeapon;
 
