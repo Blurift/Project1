@@ -15,22 +15,35 @@ namespace Maniac
         private float nextFootstep = 0;
         public float FootstepFreq = 0.5f;
 
+        private Animator animator;
+
         // Use this for initialization
         void Start()
         {
+            animator = GetComponent<Animator>();
             body = GetComponent<Rigidbody2D>();
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (rigidbody2D.velocity != Vector2.zero && Time.time > nextFootstep && FootstepSounds.Length > 0)
+            bool moving = rigidbody2D.velocity != Vector2.zero;
+            if (animator != null)
             {
+                animator.SetBool("Moving", moving);
+            }
+
+            if (moving)
+            {
+                if(Time.time > nextFootstep && FootstepSounds.Length > 0)
+                {
                 int rfi = Random.Range(0, FootstepSounds.Length); //Random Footstep Index
 
                 SoundManager.Instance.Play(FootstepSounds[rfi], false, transform.position);
 
                 nextFootstep = Time.time + FootstepFreq;
+                }
+
             }
         }
 
@@ -75,6 +88,7 @@ namespace Maniac
             Vector2 up = transform.up * force.y;
 
             Vector2 applied = (right + up).normalized;
+
             body.AddForce(applied * MoveForce);
         }
 

@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 587546653fa152940b5e15d966290c2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveForce: 10
+  MoveForce: 15
   MaxRotation: 360
   FootstepSounds:
   - {fileID: 8300000, guid: 52db9a51a1de1584bbde158ed439dc3d, type: 3}
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6589b49becb256e4ab6a705b23b2dff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 20
   isAlive: 0
   OnHitEffect: {fileID: 100000, guid: 3a18f21101ca2ee48833771407afe8cc, type: 2}
 --- !u!114 &11400006
