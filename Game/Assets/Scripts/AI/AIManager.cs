@@ -96,6 +96,8 @@ namespace Maniac
             ai.gameObject.SetActive(false);
         }
 
+        #region Spawner Methods
+
         public void SpawnerDied(AISpawner spawner)
         {
             spawners.Remove(spawner);
@@ -108,6 +110,14 @@ namespace Maniac
                 spawners[i].Invincible = state;
             }
         }
+
+        public int SpawnersRemaining()
+        {
+            return spawners.Count;
+        }
+
+
+        #endregion
 
         public void AIHitTarget(GameObject target, AI ai)
         {

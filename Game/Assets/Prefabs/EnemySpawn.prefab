@@ -12,6 +12,7 @@ GameObject:
   - 61: {fileID: 6100000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400004}
   m_Layer: 11
   m_Name: EnemySpawn
   m_TagString: EnemySpawn
@@ -67,6 +68,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20ad49b9075285543bdffc030bd63d33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8101ec312a2eb94a8a1e614602b22a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Invincible: 1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 namespace Maniac
@@ -13,13 +14,32 @@ namespace Maniac
         private int score;
         private bool isRunning = true;
 
+        //Game Information
+        public GameType GameType = GameType.Wave;
+        private GameLogic gameLogic;
+
+        //Spawn
+
+        //Player
         public GameObject StartingWeapon;
         public GameObject PlayerPrefab;
         private CharacterController player;
 
+        
+
         // Use this for initialization
         void Start()
         {
+            switch (GameType)
+            {
+                case GameType.Wave:
+                    gameLogic = new GameLogicWaves();
+                    break;
+                case GameType.Conquer:
+                    gameLogic = new GameLogicConquer();
+                    break;
+            }
+
             player = ((GameObject)Instantiate(PlayerPrefab, new Vector3(0, 0, 0), Quaternion.identity)).GetComponent<CharacterController>(); ;
             player.SetWeapon(((GameObject)Instantiate(StartingWeapon)).GetComponent<Weapon>());
 
@@ -50,5 +70,13 @@ namespace Maniac
             }
 
         }
+
+        
+    }
+
+    public enum GameType
+    {
+        Wave,
+        Conquer
     }
 }
