@@ -57,7 +57,7 @@ namespace Maniac
         {
             if (gameObject.GetComponent<Health>().isAlive == Health.State.Dead)
             {
-                AIManager.Instance.AIDying(this);
+                AIManager.Instance.AIDied(this);
 
             }
 

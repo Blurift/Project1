@@ -20,13 +20,13 @@ namespace Maniac
 
         void Start()
         {
-			secondaryWeapon = null;
             moveController = GetComponent<MovementController>();
             camera = FindObjectOfType<CameraController>();
             camera.Target = transform;
 
             events = GetComponent<EntityEventManager>();
             events.AddListener("HealthDamage", this);
+            events.AddListener("HealthDead", this);
         }
 
         // Update is called once per frame
@@ -34,11 +34,11 @@ namespace Maniac
         {
             if (gameObject.GetComponent<Health>().isAlive == Health.State.Alive)
             {
-                if (Input.GetKey(KeyCode.R))
+                if (Input.GetKeyDown(KeyCode.R))
                 {
                     currentWeapon.Reload();
                 }
-				if (Input.GetKey(KeyCode.E))
+				if (Input.GetKeyDown(KeyCode.E))
 				{
 					SwapWeapons();
 					currentWeapon.UpdateAmmo();
@@ -62,7 +62,9 @@ namespace Maniac
         }
 		void SwapWeapons()
 		{
-			Debug.Log("SWAPPING");
+            Debug.Log("Swap");
+            if (currentWeapon != null) Debug.Log("Current Weapon");
+            if (secondaryWeapon != null) Debug.Log("Second Weapon");
 			Weapon temp = currentWeapon;
 			currentWeapon = secondaryWeapon;
 			secondaryWeapon = temp;
@@ -86,10 +88,14 @@ namespace Maniac
 
         public void PushEvent(object sender, string type, EntityEvent e)
         {
+            //Debug.Log("Player Event: (" + type + ")");
             switch (type)
             {
                 case "HealthDamage":
                     camera.Shake();
+                    break;
+                case "HealthDead":
+                    WorldEventManager.Instance.PushEvent(this, "PlayerDied", new WorldEvent(transform.position));
                     break;
             }
         }

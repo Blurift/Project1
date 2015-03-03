@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Blurift;
 
 namespace Maniac
 {
@@ -20,6 +21,8 @@ namespace Maniac
             }
         }
 
+        private bool isRunning = false;
+
         private AI[] aiPool;
         public int PoolSize = 10;
         public GameObject AIPrefab;
@@ -33,6 +36,8 @@ namespace Maniac
         // Use this for initialization
         void Start()
         {
+            isRunning = true;
+
             gameManager = GetComponent<GameManager>();
             if (AIPrefab != null)
             {
@@ -54,6 +59,8 @@ namespace Maniac
         // Update is called once per frame
         void Update()
         {
+            if (!isRunning) return;
+
             if (Time.time > nextSpawn)
             {
                 if (spawners.Count > 0)
@@ -84,16 +91,19 @@ namespace Maniac
 
         public void Disable()
         {
+            isRunning = false;
             for (int i = 0; i < PoolSize; i++)
             {
                 aiPool[i].gameObject.SetActive(false);
                 this.enabled = false;
             }
         }
-        public void AIDying(AI ai)
+
+        public void AIDied(AI ai)
         {
             gameManager.AddScore(ai.scoreValue);
             ai.gameObject.SetActive(false);
+            WorldEventManager.Instance.PushEvent(this, "AIDied", new WorldEvent(ai.transform.position));
         }
 
         #region Spawner Methods
@@ -101,6 +111,7 @@ namespace Maniac
         public void SpawnerDied(AISpawner spawner)
         {
             spawners.Remove(spawner);
+            WorldEventManager.Instance.PushEvent(this, "AISpawnerDied", new WorldEvent(spawner.transform.position));
         }
 
         public void SetSpawnersInvincible(bool state)

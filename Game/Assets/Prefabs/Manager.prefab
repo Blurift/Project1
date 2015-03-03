@@ -14,6 +14,8 @@ GameObject:
   - 114: {fileID: 11411816}
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400006}
+  - 114: {fileID: 11400008}
+  - 114: {fileID: 11400010}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -61,8 +63,10 @@ MonoBehaviour:
   ammoText: {fileID: 0}
   scoreText: {fileID: 0}
   AIManager: {fileID: 100000}
-  deathScreen: {fileID: 169972, guid: ca6b72232f7190549a3f9fc948337502, type: 2}
+  GameType: 0
   StartingWeapon: {fileID: 100000, guid: 8b97fe2e300d60242bd534d154b1c24f, type: 2}
+  StartingSecondaryWeapon: {fileID: 100000, guid: bdf6eb890eb62aa4fa2e229fab93007a,
+    type: 2}
   PlayerPrefab: {fileID: 100000, guid: 0a4fef19a36e6204ea1557cf3264b0fc, type: 2}
 --- !u!114 &11400004
 MonoBehaviour:
@@ -89,6 +93,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PoolSize: 10
   ShotPrefab: {fileID: 175142, guid: 1d5535441ef59c044b06dd60600627c3, type: 2}
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d206b6be0731b094db51e029a6262519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LastMessage: {fileID: 0}
+  screen: {fileID: 0}
+--- !u!114 &11400010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607bbfaf6a00a5148b6e5ce3263d5667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11411814
 MonoBehaviour:
   m_ObjectHideFlags: 1

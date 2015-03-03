@@ -10,7 +10,6 @@ namespace Maniac
 		public Text ammoText;
         public Text scoreText;
         public GameObject AIManager;
-        public GameObject deathScreen;
         private int score;
         private bool isRunning = true;
 
@@ -41,13 +40,15 @@ namespace Maniac
                     break;
             }
 
+            gameLogic.Start();
+
             player = ((GameObject)Instantiate(PlayerPrefab, new Vector3(0, 0, 0), Quaternion.identity)).GetComponent<CharacterController>(); ;
 			player.SetSecondaryWeapon(((GameObject)Instantiate(StartingSecondaryWeapon)).GetComponent<Weapon>());
             player.SetMainWeapon(((GameObject)Instantiate(StartingWeapon)).GetComponent<Weapon>());
 
-            score = 0;
-            UpdateScore();
         }
+
+        //TO BE REMOVED
         void UpdateScore()
         {
             scoreText.text = "Score: " + score;
@@ -61,16 +62,11 @@ namespace Maniac
             score += newScoreValue;
             UpdateScore();
         }
+
         // Update is called once per frame
         void Update()
         {
-            if (player.GetComponent<Health>().isAlive == Health.State.Dead && isRunning)
-            {
-                AIManager.GetComponent<AIManager>().Disable();
-                Instantiate(deathScreen);
-                isRunning = false;
-            }
-
+            gameLogic.Update(player);
         }
 
         
