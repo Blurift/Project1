@@ -41,6 +41,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clipSize: 9
+  damage: 5
   fireSound: {fileID: 8300000, guid: 7524538fa5815e946806092960fe5d28, type: 3}
   fireRate: .200000003
   MuzzleFlashPrefab: {fileID: 100000, guid: 392bca8f573c50e4dbe75822d597400e, type: 2}
