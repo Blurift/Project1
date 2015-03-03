@@ -40,7 +40,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847d8c2f8107daf4999969aae37a02bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clipSize: 25
+  clipSize: 15
+  damage: 10
   fireSound: {fileID: 8300000, guid: 7524538fa5815e946806092960fe5d28, type: 3}
   fireRate: .150000006
   MuzzleFlashPrefab: {fileID: 100000, guid: 392bca8f573c50e4dbe75822d597400e, type: 2}

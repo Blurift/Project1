@@ -6,6 +6,7 @@ namespace Maniac
     public class Weapon : MonoBehaviour
     {
         public int clipSize;
+		public int damage;
         private int currentAmmo;
         public AudioClip fireSound;
         private float nextFire;
@@ -30,7 +31,7 @@ namespace Maniac
 				UpdateAmmo ();
                 SoundManager.Instance.Play(fireSound, false, transform.position);
                 nextFire = Time.time + fireRate;
-                ProjectileManager.Instance.CreateProj(this.transform);
+                ProjectileManager.Instance.CreateProj(this.transform, damage);
 
                 if (MuzzleFlashPrefab != null)
                 {
@@ -46,7 +47,7 @@ namespace Maniac
             }
             return true;
         }
-		private void UpdateAmmo()
+		public void UpdateAmmo()
 		{
 			gameManager.SetAmmo(currentAmmo,clipSize);
 		}

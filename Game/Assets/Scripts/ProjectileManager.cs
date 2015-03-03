@@ -45,7 +45,7 @@ namespace Maniac
 
         }
 
-        public void CreateProj(Transform spawnPoint)
+        public void CreateProj(Transform spawnPoint, int damage)
         {
             int index = -1;
             for (int i = 0; i < projPool.Length; i++)
@@ -59,6 +59,7 @@ namespace Maniac
             {
                 projPool[index].transform.position = spawnPoint.position;
                 projPool[index].transform.rotation = spawnPoint.rotation;
+				projPool[index].damage = damage;
                 projPool[index].gameObject.SetActive(true);
                 projPool[index].UpdateSpeed();
 

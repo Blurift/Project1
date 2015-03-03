@@ -13,13 +13,14 @@ namespace Maniac
        
 
         private Weapon currentWeapon;
-
+		private Weapon secondaryWeapon;
         public Transform WeaponPlacement;
 
         private EntityEventManager events;
 
         void Start()
         {
+			secondaryWeapon = null;
             moveController = GetComponent<MovementController>();
             camera = FindObjectOfType<CameraController>();
             camera.Target = transform;
@@ -37,6 +38,11 @@ namespace Maniac
                 {
                     currentWeapon.Reload();
                 }
+				if (Input.GetKey(KeyCode.E))
+				{
+					SwapWeapons();
+					currentWeapon.UpdateAmmo();
+				}
                 if (Input.GetButton("Fire1"))
                 {
                     if (!(currentWeapon.CheckForReload()))
@@ -54,7 +60,14 @@ namespace Maniac
                 }
             }
         }
+		void SwapWeapons()
+		{
+			Debug.Log("SWAPPING");
+			Weapon temp = currentWeapon;
+			currentWeapon = secondaryWeapon;
+			secondaryWeapon = temp;
 
+		}
         void FixedUpdate()
         {
             if (gameObject.GetComponent<Health>().isAlive == Health.State.Alive)
@@ -81,12 +94,20 @@ namespace Maniac
             }
         }
 
-        public void SetWeapon(Weapon weapon)
+        public void SetMainWeapon(Weapon weapon)
         {
-            currentWeapon = weapon;
-            currentWeapon.transform.SetParent(WeaponPlacement);
-            currentWeapon.transform.localPosition = new Vector3(0, 0, 0);
-            currentWeapon.transform.localRotation = Quaternion.identity;
+			currentWeapon = weapon;
+			currentWeapon.transform.SetParent (WeaponPlacement);
+			currentWeapon.transform.localPosition = new Vector3 (0, 0, 0);
+			currentWeapon.transform.localRotation = Quaternion.identity;
+			
         }
+		public void SetSecondaryWeapon(Weapon weapon)
+		{
+			secondaryWeapon = weapon;
+			secondaryWeapon.transform.SetParent (WeaponPlacement);
+			secondaryWeapon.transform.localPosition = new Vector3 (0, 0, 0);
+			secondaryWeapon.transform.localRotation = Quaternion.identity;
+		}
     }
 }
