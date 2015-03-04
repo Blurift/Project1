@@ -33,14 +33,14 @@ namespace Maniac
         {
             startTime = Time.time;
 
-            if (light != null)
+            if (GetComponent<Light>() != null)
             {
-                startIntensity = light.intensity;
+                startIntensity = GetComponent<Light>().intensity;
                 transform.position = new Vector3(transform.position.x, transform.position.y, LightPosition * -1);
             }
 
-            if (renderer != null)
-                renderer.sortingLayerName = SortLayer;
+            if (GetComponent<Renderer>() != null)
+                GetComponent<Renderer>().sortingLayerName = SortLayer;
 
 
         }
@@ -50,30 +50,30 @@ namespace Maniac
         {
             bool stop = true;
 
-            if (particleSystem != null)
+            if (GetComponent<ParticleSystem>() != null)
             {
                 if (StopEmmitingOnNoParent)
                 {
                     if (transform.parent == null)
                     {
                         //particleSystem.enableEmission = false;
-                        particleSystem.Stop();
+                        GetComponent<ParticleSystem>().Stop();
                     }
                 }
-                if (particleSystem.isPlaying)
+                if (GetComponent<ParticleSystem>().isPlaying)
                     stop = false;
             }
 
-            if (particleEmitter != null)
+            if (GetComponent<ParticleEmitter>() != null)
             {
                 stop = false;
             }
 
-            if (light != null)
+            if (GetComponent<Light>() != null)
             {
-                light.intensity = startIntensity * ((FadeTime - (Time.time - startTime)) / FadeTime);
-                if (light.intensity < 0)
-                    light.intensity = 0;
+                GetComponent<Light>().intensity = startIntensity * ((FadeTime - (Time.time - startTime)) / FadeTime);
+                if (GetComponent<Light>().intensity < 0)
+                    GetComponent<Light>().intensity = 0;
 
                 if (Time.time - startTime <= FadeTime)
                 {

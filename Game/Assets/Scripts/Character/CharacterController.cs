@@ -58,6 +58,20 @@ namespace Maniac
 
                     //Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
                 }
+
+                float x = Input.GetAxisRaw("Horizontal");
+                float y = Input.GetAxisRaw("Vertical");
+                Vector2 moveV = new Vector2(x, y);
+                if (moveV != Vector2.zero)
+                {
+                    Debug.Log("V: " + moveV + "  " + Time.time);
+                    moveController.Move(moveV);
+                }
+                //if (Input.GetKey(KeyCode.W)) moveController.body.AddForce(transform.up);
+                Vector2 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                moveController.RotateTowards(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+
+                //Debug.Log("Drag " + moveController.body.drag);
             }
         }
 		void SwapWeapons()
@@ -70,21 +84,6 @@ namespace Maniac
 			secondaryWeapon = temp;
 
 		}
-        void FixedUpdate()
-        {
-            if (gameObject.GetComponent<Health>().isAlive == Health.State.Alive)
-            {
-                float x = Input.GetAxisRaw("Horizontal");
-                float y = Input.GetAxisRaw("Vertical");
-                Vector2 moveV = new Vector2(x, y);
-                if (moveV != Vector2.zero)
-                {
-                    moveController.Move(moveV);
-                }
-                Vector2 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                moveController.RotateTowards(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-            }
-        }
 
         public void PushEvent(object sender, string type, EntityEvent e)
         {

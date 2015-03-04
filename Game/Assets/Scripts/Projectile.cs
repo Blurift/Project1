@@ -12,7 +12,7 @@ namespace Maniac
 
         void Start()
         {
-            rigidbody2D.AddForce(transform.up * speed);
+            GetComponent<Rigidbody2D>().AddForce(transform.up * speed);
         }
 
         void Update()
@@ -22,7 +22,7 @@ namespace Maniac
 
         public void UpdateSpeed()
         {
-            rigidbody2D.AddForce(transform.up * speed);
+            GetComponent<Rigidbody2D>().AddForce(transform.up * speed);
         }
 
         void OnTriggerEnter2D(Collider2D other)

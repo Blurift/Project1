@@ -9,7 +9,7 @@ namespace Maniac
 
         public float MoveForce;
         public float MaxRotation;
-        private Rigidbody2D body;
+        public Rigidbody2D body;
 
         public AudioClip[] FootstepSounds;
         private float nextFootstep = 0;
@@ -27,7 +27,8 @@ namespace Maniac
         // Update is called once per frame
         void Update()
         {
-            bool moving = rigidbody2D.velocity != Vector2.zero;
+            return;
+            bool moving = body.velocity != Vector2.zero;
             if (animator != null)
             {
                 animator.SetBool("Moving", moving);
@@ -89,7 +90,9 @@ namespace Maniac
 
             Vector2 applied = (right + up).normalized;
 
+            Debug.Log("V1: " + body.velocity);
             body.AddForce(applied * MoveForce);
+            Debug.Log("V2: " + body.velocity);
         }
 
 
