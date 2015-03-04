@@ -21,6 +21,18 @@ namespace Maniac
         private Path path;
         private float nextPathReset = 0;
 
+        //Attacking
+        public bool CanMelee = true;
+        public float MeleeRange = 1;
+        public float MeleeFreq = 1.2f;
+        public float MeleeNext = 0;
+        public float MeleeDamage = 5;
+
+        public Weapon Weapon;
+        public float Vision = 10;
+
+
+
         // Use this for initialization
         void Start()
         {
@@ -58,17 +70,38 @@ namespace Maniac
             if (gameObject.GetComponent<Health>().isAlive == Health.State.Dead)
             {
                 AIManager.Instance.AIDied(this);
-
+                return;
             }
 
+            //Handle Melee
+            if (CanMelee)
+            {
+                bool inMeleeRange = Vector2.Distance(transform.position, target.transform.position) < MeleeRange;
+                if (inMeleeRange)
+                {
+                    if (Time.time > MeleeNext)
+                    {
+                        AIManager.Instance.AIHitTarget(target, this);
+                        MeleeNext = Time.time + MeleeFreq;
+                    }
+                    return;
+                }
+            }
+
+
+            Move();
+        }
+
+        private void Move()
+        {
             if (target == null)
                 return;
 
             float distance = Vector2.Distance(transform.position, target.transform.position);
 
-            
 
-            if(distance < 3)
+
+            if (distance < 3)
             {
                 movement.MoveForward();
                 movement.RotateTowards(target.transform.position);
@@ -99,11 +132,8 @@ namespace Maniac
         }
 
         void OnCollisionEnter2D(Collision2D col)
-        {
-            if (col.gameObject.tag == "Player")
-            {
-                AIManager.Instance.AIHitTarget(col.gameObject, this);
-            }
+        {   
+            
         }
 
         public void OnPathComplete(Path p)

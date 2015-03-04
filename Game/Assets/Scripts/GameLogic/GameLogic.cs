@@ -62,20 +62,28 @@ namespace Maniac
 
     public class GameLogicWaves : GameLogic
     {
+        private float startTime;
         private int score = 0;
         private int wavesCompleted = 0;
+
+        private int enemiesPerWave = 10;
+        private int enemiesAlive = 0;
 
         public override void Start()
         {
             base.Start();
-            AIManager.Instance.SetSpawnersInvincible(true); 
+            AIManager.Instance.SetSpawnersInvincible(true);
+            AIManager.Instance.ContinousSpawning = false;
             WorldEventManager.Instance.AddListener("PlayerDied", this);
+            WorldEventManager.Instance.AddListener("AIDied", this);
+            StartWave();
+
+            startTime = Time.time;
         }
 
         public override void Update(CharacterController player)
         {
             if (!isPlaying) return;
-
         }
 
         public override void PushEvent(object sender, string type, WorldEvent e)
@@ -85,11 +93,30 @@ namespace Maniac
             {
                 case "PlayerDied":
                     GameEndScreen.Show();
-                    GameEndScreen.SetMessage("You have died in the apocalypse\nYou survived " + wavesCompleted + " waves.");
+                    float endTime = Time.time - startTime;
+                    AIManager.Instance.Disable();
+                    GameEndScreen.SetMessage("You have died in the apocalypse\nYou survived " + wavesCompleted + " waves over " + endTime + " seconds.\n You scored " + score + ".");
                     break;
                 case "AIDied":
+                    enemiesAlive--;
+                    score += 10;
+                    if (enemiesAlive == 0)
+                    {
+                        wavesCompleted++;
+                        StartWave();
+                    }
+                    
                     break;
             }
+        }
+
+        private void StartWave()
+        {
+            //yield return new WaitForSeconds(2);
+            
+            AIManager.Instance.SpawnAI(enemiesPerWave);
+            enemiesAlive = enemiesPerWave;
+            enemiesPerWave *= (int)1.2f;
         }
     }
 }

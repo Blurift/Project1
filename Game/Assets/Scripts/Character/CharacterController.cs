@@ -64,14 +64,10 @@ namespace Maniac
                 Vector2 moveV = new Vector2(x, y);
                 if (moveV != Vector2.zero)
                 {
-                    Debug.Log("V: " + moveV + "  " + Time.time);
                     moveController.Move(moveV);
                 }
-                //if (Input.GetKey(KeyCode.W)) moveController.body.AddForce(transform.up);
-                Vector2 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                moveController.RotateTowards(Camera.main.ScreenToWorldPoint(Input.mousePosition));
 
-                //Debug.Log("Drag " + moveController.body.drag);
+                moveController.RotateTowards(Camera.main.ScreenToWorldPoint(Input.mousePosition));
             }
         }
 		void SwapWeapons()

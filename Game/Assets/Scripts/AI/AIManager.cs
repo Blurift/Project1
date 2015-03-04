@@ -33,6 +33,9 @@ namespace Maniac
         private List<AISpawner> spawners = new List<AISpawner>();
         private GameManager gameManager;
 
+        public bool ContinousSpawning = true;
+        private int aiToSpawn = 0;
+
         // Use this for initialization
         void Start()
         {
@@ -61,7 +64,7 @@ namespace Maniac
         {
             if (!isRunning) return;
 
-            if (Time.time > nextSpawn)
+            if (Time.time > nextSpawn && (ContinousSpawning || aiToSpawn > 0))
             {
                 if (spawners.Count > 0)
                 {
@@ -82,11 +85,19 @@ namespace Maniac
                         aiPool[index].gameObject.GetComponent<Health>().ResetHealth();
                         aiPool[index].Initialize();
                     }
+
+                    if (!ContinousSpawning)
+                        aiToSpawn--;
                 }
 
 
                 nextSpawn = Time.time + SpawnFrequency;
             }
+        }
+
+        public void SpawnAI(int amount)
+        {
+            aiToSpawn = amount;
         }
 
         public void Disable()
@@ -101,7 +112,6 @@ namespace Maniac
 
         public void AIDied(AI ai)
         {
-            gameManager.AddScore(ai.scoreValue);
             ai.gameObject.SetActive(false);
             WorldEventManager.Instance.PushEvent(this, "AIDied", new WorldEvent(ai.transform.position));
         }
@@ -136,11 +146,9 @@ namespace Maniac
 
             if (h != null)
             {
-                h.TakeDamage(5);
-                ai.gameObject.SetActive(false);
+                //Debug.Log("Hit");
+                h.TakeDamage(ai.MeleeDamage);
             }
-
-            //TODO Make some sort of effect here.
         }
     }
 }

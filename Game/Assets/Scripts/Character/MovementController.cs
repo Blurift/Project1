@@ -27,7 +27,6 @@ namespace Maniac
         // Update is called once per frame
         void Update()
         {
-            return;
             bool moving = body.velocity != Vector2.zero;
             if (animator != null)
             {
@@ -90,9 +89,7 @@ namespace Maniac
 
             Vector2 applied = (right + up).normalized;
 
-            Debug.Log("V1: " + body.velocity);
             body.AddForce(applied * MoveForce);
-            Debug.Log("V2: " + body.velocity);
         }
 
 
