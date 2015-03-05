@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400008}
   - 114: {fileID: 11400010}
+  - 114: {fileID: 11451000}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -49,6 +50,7 @@ MonoBehaviour:
   PoolSize: 15
   AIPrefab: {fileID: 100000, guid: d414297ca8e6df64e98ec90b0f145c35, type: 2}
   SpawnFrequency: 2
+  ContinousSpawning: 1
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -142,6 +144,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PoolSize: 10
   ShotPrefab: {fileID: 175142, guid: 1d5535441ef59c044b06dd60600627c3, type: 2}
+--- !u!114 &11451000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2dddba35ed1ce49990d29e6785f652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Groups:
+  - GroupName: Blood
+    sprites:
+    - {fileID: 21300000, guid: 013ac80888f6af446bdde99b0105747e, type: 3}
+    - {fileID: 21300002, guid: 013ac80888f6af446bdde99b0105747e, type: 3}
+    - {fileID: 21300004, guid: 013ac80888f6af446bdde99b0105747e, type: 3}
+    - {fileID: 21300006, guid: 013ac80888f6af446bdde99b0105747e, type: 3}
+  effectPrefab: {fileID: 166474, guid: a763842aed58e1241b4b502de7fc7945, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -153,4 +174,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

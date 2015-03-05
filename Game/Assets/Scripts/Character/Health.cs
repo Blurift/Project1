@@ -11,6 +11,7 @@ namespace Maniac
         private float health;
         public float maxHealth;
         public State isAlive;
+        public string EffectDecal = "";
         // Use this for initialization
 
         public GameObject OnHitEffect;
@@ -45,6 +46,9 @@ namespace Maniac
 
             if (OnHitEffect != null)
                 Instantiate(OnHitEffect, transform.position, Quaternion.identity);
+
+            if (EffectDecal != "")
+                EffectManager.Instance.CreateEffect(EffectDecal, transform.position);
         }
         // Update is called once per frame
         void Update()

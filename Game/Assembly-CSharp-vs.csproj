@@ -119,6 +119,7 @@
      <Compile Include="Assets\Scripts\Character\Health.cs" />
      <Compile Include="Assets\Scripts\Character\MovementController.cs" />
      <Compile Include="Assets\Scripts\EffectBehaviour.cs" />
+     <Compile Include="Assets\Scripts\GameLogic\EffectManager.cs" />
      <Compile Include="Assets\Scripts\GameLogic\GameEndScreen.cs" />
      <Compile Include="Assets\Scripts\GameLogic\GameLogic.cs" />
      <Compile Include="Assets\Scripts\GameLogic\GameManager.cs" />
