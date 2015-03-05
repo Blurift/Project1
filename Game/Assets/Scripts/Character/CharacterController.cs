@@ -66,10 +66,24 @@ namespace Maniac
                 {
                     moveController.Move(moveV);
                 }
+                Vector2 mp = Input.mousePosition;
+                Vector3 p = Camera.main.ScreenToWorldPoint(new Vector3(mp.x, mp.y, -Camera.main.transform.position.z));
 
-                moveController.RotateTowards(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                Debug.Log(p);
+
+                moveController.RotateTowards(p);
             }
         }
+
+        public Vector3 GetWorldPositionOnPlane(Vector3 screenPosition, float z)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(screenPosition);
+            Plane xy = new Plane(Vector3.forward, new Vector3(0, 0, z));
+            float distance;
+            xy.Raycast(ray, out distance);
+            return ray.GetPoint(distance);
+        }
+
 		void SwapWeapons()
 		{
             Debug.Log("Swap");

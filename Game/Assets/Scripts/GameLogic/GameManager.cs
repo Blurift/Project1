@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using SpriteTile;
 
 namespace Maniac
 {
@@ -12,6 +13,8 @@ namespace Maniac
         public GameObject AIManager;
         private int score;
         private bool isRunning = true;
+
+        public TextAsset level;
 
         //Game Information
         public GameType GameType = GameType.Wave;
@@ -30,6 +33,8 @@ namespace Maniac
         // Use this for initialization
         void Start()
         {
+            Tile.SetCamera();
+            Tile.LoadLevel(level);
             switch (GameType)
             {
                 case GameType.Wave:

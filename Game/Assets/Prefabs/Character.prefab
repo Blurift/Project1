@@ -217,8 +217,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6589b49becb256e4ab6a705b23b2dff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 25
+  maxHealth: 250
   isAlive: 0
+  EffectDecal: 
   OnHitEffect: {fileID: 100000, guid: 3a18f21101ca2ee48833771407afe8cc, type: 2}
 --- !u!114 &11493196
 MonoBehaviour:

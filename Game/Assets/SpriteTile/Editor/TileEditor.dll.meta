@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: a459a6c7acb0d4cbfad5c7431ef320b1
+labels:
+- SpriteTile
+- sprite
+- tile
+- grid
+- 2D
+- tileset
+- engine
+PluginImporter:
+  serializedVersion: 1
+  iconMap: {}
+  executionOrder: {}
+  isPreloaded: 0
+  platformData:
+    Any:
+      enabled: 0
+      settings: {}
+    Editor:
+      enabled: 1
+      settings:
+        DefaultValueInitialized: true
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

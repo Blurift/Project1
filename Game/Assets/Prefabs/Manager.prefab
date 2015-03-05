@@ -65,6 +65,7 @@ MonoBehaviour:
   ammoText: {fileID: 0}
   scoreText: {fileID: 0}
   AIManager: {fileID: 100000}
+  level: {fileID: 4900000, guid: 1698b9ccfc0ff6e41b9473952812816b, type: 3}
   GameType: 0
   StartingWeapon: {fileID: 100000, guid: 8b97fe2e300d60242bd534d154b1c24f, type: 2}
   StartingSecondaryWeapon: {fileID: 100000, guid: bdf6eb890eb62aa4fa2e229fab93007a,
