@@ -8,6 +8,17 @@ namespace Maniac
 {
     public class GameManager : MonoBehaviour
     {
+        private static GameManager _instance;
+        public static GameManager Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = FindObjectOfType<GameManager>();
+                return _instance;
+            }
+        }
+
 		public Text ammoText;
         public Text scoreText;
         public GameObject AIManager;
@@ -27,12 +38,22 @@ namespace Maniac
 		public GameObject StartingSecondaryWeapon;
         public GameObject PlayerPrefab;
         private CharacterController player;
-
+        [System.NonSerialized]
+        public List<PlayerSpawn> Spawns = new List<PlayerSpawn>();
         
+
 
         // Use this for initialization
         void Start()
         {
+            PlayerSpawn[] spawns = FindObjectsOfType<PlayerSpawn>();
+
+            for (int i = 0; i < spawns.Length; i++)
+			{
+			    if(spawns[i].Types.Contains(GameType))
+                    Spawns.Add(spawns[i]);
+			}
+
             Tile.SetCamera();
             Tile.LoadLevel(level);
             switch (GameType)
@@ -47,7 +68,8 @@ namespace Maniac
 
             gameLogic.Start();
 
-            player = ((GameObject)Instantiate(PlayerPrefab, new Vector3(0, 0, 0), Quaternion.identity)).GetComponent<CharacterController>(); ;
+            Vector3 spawnLoc = Spawns[Random.Range(0, Spawns.Count)].transform.position;
+            player = ((GameObject)Instantiate(PlayerPrefab, spawnLoc, Quaternion.identity)).GetComponent<CharacterController>(); ;
 			player.SetSecondaryWeapon(((GameObject)Instantiate(StartingSecondaryWeapon)).GetComponent<Weapon>());
             player.SetMainWeapon(((GameObject)Instantiate(StartingWeapon)).GetComponent<Weapon>());
 

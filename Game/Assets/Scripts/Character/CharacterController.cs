@@ -66,10 +66,14 @@ namespace Maniac
                 {
                     moveController.Move(moveV);
                 }
-                Vector2 mp = Input.mousePosition;
-                Vector3 p = Camera.main.ScreenToWorldPoint(new Vector3(mp.x, mp.y, -Camera.main.transform.position.z));
 
-                Debug.Log(p);
+                
+                Vector2 mp = Input.mousePosition;
+
+                Vector2 p = Camera.main.ScreenToWorldPoint(mp);
+                //Vector3 p = Camera.main.ScreenToWorldPoint(new Vector3(mp.x, mp.y, -Camera.main.transform.position.z));
+
+                //Debug.Log(p);
 
                 moveController.RotateTowards(p);
             }
