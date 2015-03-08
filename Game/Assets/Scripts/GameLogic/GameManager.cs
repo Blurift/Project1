@@ -54,8 +54,7 @@ namespace Maniac
                     Spawns.Add(spawns[i]);
 			}
 
-            Tile.SetCamera();
-            Tile.LoadLevel(level);
+            
             switch (GameType)
             {
                 case GameType.Wave:
@@ -73,6 +72,9 @@ namespace Maniac
 			player.SetSecondaryWeapon(((GameObject)Instantiate(StartingSecondaryWeapon)).GetComponent<Weapon>());
             player.SetMainWeapon(((GameObject)Instantiate(StartingWeapon)).GetComponent<Weapon>());
 
+
+            Tile.SetCamera();
+            Tile.LoadLevel(level);
         }
 
         //TO BE REMOVED
