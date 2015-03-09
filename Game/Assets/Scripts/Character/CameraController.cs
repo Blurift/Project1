@@ -19,6 +19,8 @@ namespace Maniac
 
         private float zLock;
 
+        public bool PixelSnap = false;
+
 
         // Use this for initialization
         void Start()
@@ -40,6 +42,25 @@ namespace Maniac
             realPosition = Vector3.Lerp(realPosition, targetPos, Smoothness * Time.deltaTime);
 
             transform.position = realPosition + shakePos;
+
+            if (PixelSnap)
+            {
+                float x = transform.position.x * 32;
+                float y = transform.position.y * 32;
+
+                if (Input.GetKeyDown(KeyCode.F6))
+                    Debug.Log("Before: " + transform.position.x);
+
+                x = Mathf.Round(x)/32;
+                y = Mathf.Round(y)/32;
+
+                if (Input.GetKeyDown(KeyCode.F6))
+                    Debug.Log("After: " + x);
+
+                transform.position = new Vector3(x, y, transform.position.z);
+
+                
+            }
 
             if (Time.time < shakeStart + ShakeTime)
             {

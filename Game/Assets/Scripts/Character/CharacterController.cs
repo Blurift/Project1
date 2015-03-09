@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Blurift;
+using Blurift.Toolkit2D;
 
 namespace Maniac
 {
@@ -128,5 +129,27 @@ namespace Maniac
 			secondaryWeapon.transform.localPosition = new Vector3 (0, 0, 0);
 			secondaryWeapon.transform.localRotation = Quaternion.identity;
 		}
+
+        void OnTriggerEnter2D(Collider2D col)
+        {
+            OverlayFader of = col.gameObject.GetComponent<OverlayFader>();
+
+            Debug.Log("Hit");
+
+            if (of != null)
+            {
+                of.Set(false);
+            }
+        }
+
+        void OnTriggerExit2D(Collider2D col)
+        {
+            OverlayFader of = col.gameObject.GetComponent<OverlayFader>();
+
+            if (of != null)
+            {
+                of.Set(true);
+            }
+        }
     }
 }

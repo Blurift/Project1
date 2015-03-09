@@ -23,8 +23,8 @@ TagManager:
   - Player
   - EnemySpawn
   - Minimap
-  - 
-  - 
+  - Roof
+  - Projectile
   - 
   - 
   - 
@@ -60,6 +60,9 @@ TagManager:
     locked: 0
   - name: Effects
     uniqueID: 2318153951
+    locked: 0
+  - name: Roof
+    uniqueID: 702879595
     locked: 0
   - name: UI
     uniqueID: 1985999731

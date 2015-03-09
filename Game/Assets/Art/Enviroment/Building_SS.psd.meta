@@ -1,0 +1,951 @@
+fileFormatVersion: 2
+guid: fb74db452e3c37d459cc25beb408de50
+timeCreated: 1425879170
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Building_SS_0
+    21300002: Building_SS_1
+    21300004: Building_SS_2
+    21300006: Building_SS_3
+    21300008: Building_SS_4
+    21300010: Building_SS_5
+    21300012: Building_SS_6
+    21300014: Building_SS_7
+    21300016: Building_SS_8
+    21300018: Building_SS_9
+    21300020: Building_SS_10
+    21300022: Building_SS_11
+    21300024: Building_SS_12
+    21300026: Building_SS_13
+    21300028: Building_SS_14
+    21300030: Building_SS_15
+    21300032: Building_SS_16
+    21300034: Building_SS_17
+    21300036: Building_SS_18
+    21300038: Building_SS_19
+    21300040: Building_SS_20
+    21300042: Building_SS_21
+    21300044: Building_SS_22
+    21300046: Building_SS_23
+    21300048: Building_SS_24
+    21300050: Building_SS_25
+    21300052: Building_SS_26
+    21300054: Building_SS_27
+    21300056: Building_SS_28
+    21300058: Building_SS_29
+    21300060: Building_SS_30
+    21300062: Building_SS_31
+    21300064: Building_SS_32
+    21300066: Building_SS_33
+    21300068: Building_SS_34
+    21300070: Building_SS_35
+    21300072: Building_SS_36
+    21300074: Building_SS_37
+    21300076: Building_SS_38
+    21300078: Building_SS_39
+    21300080: Building_SS_40
+    21300082: Building_SS_41
+    21300084: Building_SS_42
+    21300086: Building_SS_43
+    21300088: Building_SS_44
+    21300090: Building_SS_45
+    21300092: Building_SS_46
+    21300094: Building_SS_47
+    21300096: Building_SS_48
+    21300098: Building_SS_49
+    21300100: Building_SS_50
+    21300102: Building_SS_51
+    21300104: Building_SS_52
+    21300106: Building_SS_53
+    21300108: Building_SS_54
+    21300110: Building_SS_55
+    21300112: Building_SS_56
+    21300114: Building_SS_57
+    21300116: Building_SS_58
+    21300118: Building_SS_59
+    21300120: Building_SS_60
+    21300122: Building_SS_61
+    21300124: Building_SS_62
+    21300126: Building_SS_63
+    21300128: Building_SS_64
+    21300130: Building_SS_65
+    21300132: Building_SS_66
+    21300134: Building_SS_67
+    21300136: Building_SS_68
+    21300138: Building_SS_69
+    21300140: Building_SS_70
+    21300142: Building_SS_71
+    21300144: Building_SS_72
+    21300146: Building_SS_73
+    21300148: Building_SS_74
+    21300150: Building_SS_75
+    21300152: Building_SS_76
+    21300154: Building_SS_77
+    21300156: Building_SS_78
+    21300158: Building_SS_79
+    21300160: Building_SS_80
+    21300162: Building_SS_81
+    21300164: Building_SS_82
+    21300166: Building_SS_83
+    21300168: Building_SS_84
+    21300170: Building_SS_85
+    21300172: Building_SS_86
+    21300174: Building_SS_87
+    21300176: Building_SS_88
+    21300178: Building_SS_89
+    21300180: Building_SS_90
+    21300182: Building_SS_91
+    21300184: Building_SS_92
+    21300186: Building_SS_93
+    21300188: Building_SS_94
+    21300190: Building_SS_95
+    21300192: Building_SS_96
+    21300194: Building_SS_97
+    21300196: Building_SS_98
+    21300198: Building_SS_99
+    21300200: Building_SS_100
+    21300202: Building_SS_101
+    21300204: Building_SS_102
+    21300206: Building_SS_103
+    21300208: Building_SS_104
+    21300210: Building_SS_105
+    21300212: Building_SS_106
+    21300214: Building_SS_107
+    21300216: Building_SS_108
+    21300218: Building_SS_109
+    21300220: Building_SS_110
+    21300222: Building_SS_111
+    21300224: Building_SS_112
+    21300226: Building_SS_113
+    21300228: Building_SS_114
+    21300230: Building_SS_115
+    21300232: Building_SS_116
+    21300234: Building_SS_117
+    21300236: Building_SS_118
+    21300238: Building_SS_119
+    21300240: Building_SS_120
+    21300242: Building_SS_121
+    21300244: Building_SS_122
+    21300246: Building_SS_123
+    21300248: Building_SS_124
+    21300250: Building_SS_125
+    21300252: Building_SS_126
+    21300254: Building_SS_127
+    21300256: Building_SS_128
+    21300258: Building_SS_129
+    21300260: Building_SS_130
+    21300262: Building_SS_131
+    21300264: Building_SS_132
+    21300266: Building_SS_133
+    21300268: Building_SS_134
+    21300270: Building_SS_135
+    21300272: Building_SS_136
+    21300274: Building_SS_137
+    21300276: Building_SS_138
+    21300278: Building_SS_139
+    21300280: Building_SS_140
+    21300282: Building_SS_141
+    21300284: Building_SS_142
+    21300286: Building_SS_143
+    21300288: Building_SS_144
+    21300290: Building_SS_145
+    21300292: Building_SS_146
+    21300294: Building_SS_147
+    21300296: Building_SS_148
+    21300298: Building_SS_149
+    21300300: Building_SS_150
+    21300302: Building_SS_151
+    21300304: Building_SS_152
+    21300306: Building_SS_153
+    21300308: Building_SS_154
+    21300310: Building_SS_155
+    21300312: Building_SS_156
+    21300314: Building_SS_157
+    21300316: Building_SS_158
+    21300318: Building_SS_159
+    21300320: Building_SS_160
+    21300322: Building_SS_161
+    21300324: Building_SS_162
+    21300326: Building_SS_163
+    21300328: Building_SS_164
+    21300330: Building_SS_165
+    21300332: Building_SS_166
+    21300334: Building_SS_167
+    21300336: Building_SS_168
+    21300338: Building_SS_169
+    21300340: Building_SS_170
+    21300342: Building_SS_171
+    21300344: Building_SS_172
+    21300346: Building_SS_173
+    21300348: Building_SS_174
+    21300350: Building_SS_175
+    21300352: Building_SS_176
+    21300354: Building_SS_177
+    21300356: Building_SS_178
+    21300358: Building_SS_179
+    21300360: Building_SS_180
+    21300362: Building_SS_181
+    21300364: Building_SS_182
+    21300366: Building_SS_183
+    21300368: Building_SS_184
+    21300370: Building_SS_185
+    21300372: Building_SS_186
+    21300374: Building_SS_187
+    21300376: Building_SS_188
+    21300378: Building_SS_189
+    21300380: Building_SS_190
+    21300382: Building_SS_191
+    21300384: Building_SS_192
+    21300386: Building_SS_193
+    21300388: Building_SS_194
+    21300390: Building_SS_195
+    21300392: Building_SS_196
+    21300394: Building_SS_197
+    21300396: Building_SS_198
+    21300398: Building_SS_199
+    21300400: Building_SS_200
+    21300402: Building_SS_201
+    21300404: Building_SS_202
+    21300406: Building_SS_203
+    21300408: Building_SS_204
+    21300410: Building_SS_205
+    21300412: Building_SS_206
+    21300414: Building_SS_207
+    21300416: Building_SS_208
+    21300418: Building_SS_209
+    21300420: Building_SS_210
+    21300422: Building_SS_211
+    21300424: Building_SS_212
+    21300426: Building_SS_213
+    21300428: Building_SS_214
+    21300430: Building_SS_215
+    21300432: Building_SS_216
+    21300434: Building_SS_217
+    21300436: Building_SS_218
+    21300438: Building_SS_219
+    21300440: Building_SS_220
+    21300442: Building_SS_221
+    21300444: Building_SS_222
+    21300446: Building_SS_223
+    21300448: Building_SS_224
+    21300450: Building_SS_225
+    21300452: Building_SS_226
+    21300454: Building_SS_227
+    21300456: Building_SS_228
+    21300458: Building_SS_229
+    21300460: Building_SS_230
+    21300462: Building_SS_231
+    21300464: Building_SS_232
+    21300466: Building_SS_233
+    21300468: Building_SS_234
+    21300470: Building_SS_235
+    21300472: Building_SS_236
+    21300474: Building_SS_237
+    21300476: Building_SS_238
+    21300478: Building_SS_239
+    21300480: Building_SS_240
+    21300482: Building_SS_241
+    21300484: Building_SS_242
+    21300486: Building_SS_243
+    21300488: Building_SS_244
+    21300490: Building_SS_245
+    21300492: Building_SS_246
+    21300494: Building_SS_247
+    21300496: Building_SS_248
+    21300498: Building_SS_249
+    21300500: Building_SS_250
+    21300502: Building_SS_251
+    21300504: Building_SS_252
+    21300506: Building_SS_253
+    21300508: Building_SS_254
+    21300510: Building_SS_255
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 64
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Building_SS_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_15
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_31
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_33
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_39
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_41
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_42
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_45
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_47
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_50
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_51
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_52
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_53
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_54
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_55
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_57
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_58
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_59
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_60
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_61
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_62
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Building_SS_63
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
