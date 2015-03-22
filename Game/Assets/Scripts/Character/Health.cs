@@ -9,6 +9,11 @@ namespace Maniac
     {
         public enum State { Alive, Dead };
         private float health;
+        public float HealthCurrent
+        {
+            get { return health; }
+        }
+
         public float maxHealth;
         public State isAlive;
         public string EffectDecal = "";

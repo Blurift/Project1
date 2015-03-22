@@ -19,8 +19,6 @@ namespace Maniac
             }
         }
 
-		public Text ammoText;
-        public Text scoreText;
         public GameObject AIManager;
         private int score;
         private bool isRunning = true;
@@ -75,21 +73,6 @@ namespace Maniac
 
             Tile.SetCamera();
             Tile.LoadLevel(level);
-        }
-
-        //TO BE REMOVED
-        void UpdateScore()
-        {
-            scoreText.text = "Score: " + score;
-        }
-		public void SetAmmo(float currentAmmo, float maxAmmo)
-		{
-			ammoText.text = currentAmmo + "/" + maxAmmo;
-		}
-        public void AddScore(int newScoreValue)
-        {
-            score += newScoreValue;
-            UpdateScore();
         }
 
         // Update is called once per frame

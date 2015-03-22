@@ -105,6 +105,8 @@ namespace Maniac
                         wavesCompleted++;
                         StartWave();
                     }
+
+                    HUDManager.Instance.SetScore(score);
                     
                     break;
             }

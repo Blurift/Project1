@@ -19,6 +19,8 @@ namespace Maniac
 
         private EntityEventManager events;
 
+        private Health health;
+
         void Start()
         {
             moveController = GetComponent<MovementController>();
@@ -28,6 +30,8 @@ namespace Maniac
             events = GetComponent<EntityEventManager>();
             events.AddListener("HealthDamage", this);
             events.AddListener("HealthDead", this);
+
+            health = GetComponent<Health>();
         }
 
         // Update is called once per frame
@@ -106,6 +110,7 @@ namespace Maniac
             switch (type)
             {
                 case "HealthDamage":
+                    HUDManager.Instance.SetHealth(health.HealthCurrent, health.maxHealth);
                     camera.Shake();
                     break;
                 case "HealthDead":

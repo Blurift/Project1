@@ -47,10 +47,13 @@ namespace Maniac
             }
             return true;
         }
+
 		public void UpdateAmmo()
 		{
-			gameManager.SetAmmo(currentAmmo,clipSize);
+            HUDManager.Instance.SetAmmo(currentAmmo, 0);
+			//gameManager.SetAmmo(currentAmmo,clipSize);
 		}
+
 		public float GetMaxAmmo()
 		{
 			return clipSize;

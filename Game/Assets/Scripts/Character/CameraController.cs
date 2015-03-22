@@ -45,14 +45,14 @@ namespace Maniac
 
             if (PixelSnap)
             {
-                float x = transform.position.x * 32;
-                float y = transform.position.y * 32;
+                float x = transform.position.x * 64;
+                float y = transform.position.y * 64;
 
                 if (Input.GetKeyDown(KeyCode.F6))
                     Debug.Log("Before: " + transform.position.x);
 
-                x = Mathf.Round(x)/32;
-                y = Mathf.Round(y)/32;
+                x = Mathf.Round(x)/64;
+                y = Mathf.Round(y)/64;
 
                 if (Input.GetKeyDown(KeyCode.F6))
                     Debug.Log("After: " + x);
