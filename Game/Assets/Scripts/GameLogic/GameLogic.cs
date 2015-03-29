@@ -88,7 +88,6 @@ namespace Maniac
 
         public override void PushEvent(object sender, string type, WorldEvent e)
         {
-            Debug.Log("World Event: (" + type + ")");
             switch (type)
             {
                 case "PlayerDied":

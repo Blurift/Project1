@@ -15,6 +15,8 @@ namespace Maniac
         private float nextFootstep = 0;
         public float FootstepFreq = 0.5f;
 
+        public float Speed = 1;
+
         private Animator animator;
 
         // Use this for initialization
@@ -89,7 +91,7 @@ namespace Maniac
 
             Vector2 applied = (right + up).normalized;
 
-            body.AddForce(applied * MoveForce);
+            body.AddForce(applied * MoveForce * Time.deltaTime * 60 * Speed);
         }
 
 

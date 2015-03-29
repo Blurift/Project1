@@ -1405,7 +1405,7 @@ GameObject:
   - 61: {fileID: 6132604}
   - 61: {fileID: 6109588}
   m_Layer: 9
-  m_Name: Building
+  m_Name: Building Square 5x5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

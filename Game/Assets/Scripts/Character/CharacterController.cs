@@ -34,6 +34,20 @@ namespace Maniac
             health = GetComponent<Health>();
         }
 
+        void FixedUpdate()
+        {
+            if (gameObject.GetComponent<Health>().isAlive == Health.State.Alive)
+            {
+                float x = Input.GetAxisRaw("Horizontal");
+                float y = Input.GetAxisRaw("Vertical");
+                Vector2 moveV = new Vector2(x, y);
+                if (moveV != Vector2.zero)
+                {
+                    moveController.Move(moveV);
+                }
+            }
+        }
+
         // Update is called once per frame
         void Update()
         {
@@ -64,13 +78,7 @@ namespace Maniac
                     //Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
                 }
 
-                float x = Input.GetAxisRaw("Horizontal");
-                float y = Input.GetAxisRaw("Vertical");
-                Vector2 moveV = new Vector2(x, y);
-                if (moveV != Vector2.zero)
-                {
-                    moveController.Move(moveV);
-                }
+                
 
                 
                 Vector2 mp = Input.mousePosition;
@@ -138,8 +146,6 @@ namespace Maniac
         void OnTriggerEnter2D(Collider2D col)
         {
             OverlayFader of = col.gameObject.GetComponent<OverlayFader>();
-
-            Debug.Log("Hit");
 
             if (of != null)
             {

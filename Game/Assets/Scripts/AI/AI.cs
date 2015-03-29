@@ -87,8 +87,10 @@ namespace Maniac
                     return;
                 }
             }
+        }
 
-
+        void FixedUpdate()
+        {
             Move();
         }
 
