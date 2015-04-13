@@ -18794,7 +18794,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1001 &293980546
 Prefab:
   m_ObjectHideFlags: 0
@@ -24397,7 +24397,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a760172cb3adc4445b47df0554d58549, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11455280, guid: a760172cb3adc4445b47df0554d58549, type: 2}
       propertyPath: healthBar
@@ -24408,10 +24408,6 @@ Prefab:
       value: 
       objectReference: {fileID: 1915305887}
     - target: {fileID: 11455280, guid: a760172cb3adc4445b47df0554d58549, type: 2}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 16628857}
-    - target: {fileID: 11400002, guid: a760172cb3adc4445b47df0554d58549, type: 2}
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 16628857}
@@ -37506,7 +37502,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &577508627
 GameObject:
   m_ObjectHideFlags: 0
@@ -136855,7 +136851,7 @@ Transform:
   - {fileID: 2025280430}
   - {fileID: 1913856152}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &2084575946
 GameObject:
   m_ObjectHideFlags: 0

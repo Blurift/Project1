@@ -1,0 +1,1276 @@
+fileFormatVersion: 2
+guid: 7fbed1084f277ac46a4b6c01538c6d45
+timeCreated: 1428812368
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: banditSpriteSheet_0
+    21300002: banditSpriteSheet_1
+    21300004: banditSpriteSheet_2
+    21300006: banditSpriteSheet_3
+    21300008: banditSpriteSheet_4
+    21300010: banditSpriteSheet_5
+    21300012: banditSpriteSheet_6
+    21300014: banditSpriteSheet_7
+    21300016: banditSpriteSheet_8
+    21300018: banditSpriteSheet_9
+    21300020: banditSpriteSheet_10
+    21300022: banditSpriteSheet_11
+    21300024: banditSpriteSheet_12
+    21300026: banditSpriteSheet_13
+    21300028: banditSpriteSheet_14
+    21300030: banditSpriteSheet_15
+    21300032: banditSpriteSheet_16
+    21300034: banditSpriteSheet_17
+    21300036: banditSpriteSheet_18
+    21300038: banditSpriteSheet_19
+    21300040: banditSpriteSheet_20
+    21300042: banditSpriteSheet_21
+    21300044: banditSpriteSheet_22
+    21300046: banditSpriteSheet_23
+    21300048: banditSpriteSheet_24
+    21300050: banditSpriteSheet_25
+    21300052: banditSpriteSheet_26
+    21300054: banditSpriteSheet_27
+    21300056: banditSpriteSheet_28
+    21300058: banditSpriteSheet_29
+    21300060: banditSpriteSheet_30
+    21300062: banditSpriteSheet_31
+    21300064: banditSpriteSheet_32
+    21300066: banditSpriteSheet_33
+    21300068: banditSpriteSheet_34
+    21300070: banditSpriteSheet_35
+    21300072: banditSpriteSheet_36
+    21300074: banditSpriteSheet_37
+    21300076: banditSpriteSheet_38
+    21300078: banditSpriteSheet_39
+    21300080: banditSpriteSheet_40
+    21300082: banditSpriteSheet_41
+    21300084: banditSpriteSheet_42
+    21300086: banditSpriteSheet_43
+    21300088: banditSpriteSheet_44
+    21300090: banditSpriteSheet_45
+    21300092: banditSpriteSheet_46
+    21300094: banditSpriteSheet_47
+    21300096: banditSpriteSheet_48
+    21300098: banditSpriteSheet_49
+    21300100: banditSpriteSheet_50
+    21300102: banditSpriteSheet_51
+    21300104: banditSpriteSheet_52
+    21300106: banditSpriteSheet_53
+    21300108: banditSpriteSheet_54
+    21300110: banditSpriteSheet_55
+    21300112: banditSpriteSheet_56
+    21300114: banditSpriteSheet_57
+    21300116: banditSpriteSheet_58
+    21300118: banditSpriteSheet_59
+    21300120: banditSpriteSheet_60
+    21300122: banditSpriteSheet_61
+    21300124: banditSpriteSheet_62
+    21300126: banditSpriteSheet_63
+    21300128: banditSpriteSheet_64
+    21300130: banditSpriteSheet_65
+    21300132: banditSpriteSheet_66
+    21300134: banditSpriteSheet_67
+    21300136: banditSpriteSheet_68
+    21300138: banditSpriteSheet_69
+    21300140: banditSpriteSheet_70
+    21300142: banditSpriteSheet_71
+    21300144: banditSpriteSheet_72
+    21300146: banditSpriteSheet_73
+    21300148: banditSpriteSheet_74
+    21300150: banditSpriteSheet_75
+    21300152: banditSpriteSheet_76
+    21300154: banditSpriteSheet_77
+    21300156: banditSpriteSheet_78
+    21300158: banditSpriteSheet_79
+    21300160: banditSpriteSheet_80
+    21300162: banditSpriteSheet_81
+    21300164: banditSpriteSheet_82
+    21300166: banditSpriteSheet_83
+    21300168: banditSpriteSheet_84
+    21300170: banditSpriteSheet_85
+    21300172: banditSpriteSheet_86
+    21300174: banditSpriteSheet_87
+    21300176: banditSpriteSheet_88
+    21300178: banditSpriteSheet_89
+    21300180: banditSpriteSheet_90
+    21300182: banditSpriteSheet_91
+    21300184: banditSpriteSheet_92
+    21300186: banditSpriteSheet_93
+    21300188: banditSpriteSheet_94
+    21300190: banditSpriteSheet_95
+    21300192: banditSpriteSheet_96
+    21300194: banditSpriteSheet_97
+    21300196: banditSpriteSheet_98
+    21300198: banditSpriteSheet_99
+    21300200: banditSpriteSheet_100
+    21300202: banditSpriteSheet_101
+    21300204: banditSpriteSheet_102
+    21300206: banditSpriteSheet_103
+    21300208: banditSpriteSheet_104
+    21300210: banditSpriteSheet_105
+    21300212: banditSpriteSheet_106
+    21300214: banditSpriteSheet_107
+    21300216: banditSpriteSheet_108
+    21300218: banditSpriteSheet_109
+    21300220: banditSpriteSheet_110
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 64
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: banditSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1568
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1568
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1568
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1568
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1568
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1568
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1568
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1568
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1568
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1568
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1568
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1568
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1472
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1472
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1472
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1472
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1472
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1472
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1472
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1472
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1472
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1472
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1472
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1472
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1376
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1376
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1376
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1376
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1376
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1280
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1280
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1280
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1280
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1184
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1184
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1184
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1184
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1184
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1184
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1184
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1184
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1184
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1184
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1088
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1088
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1088
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1088
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_48
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1088
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1088
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1088
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 992
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 992
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_53
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 992
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 992
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 992
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 992
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 992
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_58
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 896
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 896
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 896
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 896
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_63
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 896
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 896
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_66
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 800
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 800
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_68
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 800
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_69
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 800
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_70
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 800
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_71
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 800
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_72
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 800
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_73
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 800
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_74
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 800
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_76
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 704
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_77
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 704
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_78
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 704
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_79
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 704
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_80
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 704
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_81
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 704
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_82
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 608
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_83
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 608
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_84
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 608
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_85
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 608
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_86
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 608
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_87
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 608
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_88
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 608
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_89
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_90
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 512
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_91
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_92
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 512
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_93
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 416
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_94
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 416
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_95
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 416
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_96
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 320
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_97
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 320
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_98
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 320
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_99
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 224
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_100
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 224
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_101
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 224
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_102
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 128
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_103
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 128
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_104
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 128
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_105
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 32
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_106
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 32
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_107
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 32
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_108
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 32
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_109
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 32
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: banditSpriteSheet_110
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 32
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
