@@ -53,6 +53,28 @@ namespace Maniac
         {
             if (gameObject.GetComponent<Health>().isAlive == Health.State.Alive)
             {
+                //Check for items around the player.
+                GameObject[] pickups = GameObject.FindGameObjectsWithTag("Pickup");
+                float pickupDistance = 0;
+                GameObject pickupSelected = null;
+
+                for (int i = 0; i < pickups.Length; i++)
+                {
+                    if(pickupSelected == null)
+                    {
+                        pickupSelected = pickups[i];
+                        pickupDistance = Vector2.Distance(pickupSelected.transform.position, transform.position);
+                    }
+                    else
+                    {
+                        GameObject currentPickup = pickups[i];
+                        float tempDistance = Vector2.Distance(currentPickup.transform.position, pickupSelected.transform.position);
+                        if (tempDistance < pickupDistance)
+                            pickupSelected = currentPickup;
+                    }
+                }
+
+
                 if (Input.GetKeyDown(KeyCode.R))
                 {
                     currentWeapon.Reload();
