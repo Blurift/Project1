@@ -9,6 +9,7 @@ TagManager:
   - EnemySpawn
   - Manager
   - PlayerSpawn
+  - Pickup
   layers:
   - Default
   - TransparentFX

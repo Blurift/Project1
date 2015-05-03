@@ -23,9 +23,10 @@ namespace Maniac
 
         private bool isRunning = false;
 
-        private AI[] aiPool;
         public int PoolSize = 10;
-        public GameObject AIPrefab;
+        public GameObject[] AIPrefabs;
+        private Dictionary<GameObject, AI[]> aiPool = new Dictionary<GameObject, AI[]>();
+
 
         public float SpawnFrequency = 2;
         private float nextSpawn = 0;
@@ -42,13 +43,18 @@ namespace Maniac
             isRunning = true;
 
             gameManager = GetComponent<GameManager>();
-            if (AIPrefab != null)
+            if (AIPrefabs.Length > 0)
             {
-                aiPool = new AI[PoolSize];
-                for (int i = 0; i < PoolSize; i++)
+                for (int i = 0; i < AIPrefabs.Length; i++)
                 {
-                    aiPool[i] = ((GameObject)Instantiate(AIPrefab)).GetComponent<AI>();
-                    aiPool[i].gameObject.SetActive(false);
+                    AI ai = AIPrefabs[i].GetComponent<AI>();
+                    aiPool.Add(AIPrefabs[i], new AI[ai.MaxInGame]);
+                    for (int j = 0; j < ai.MaxInGame; j++)
+                    {
+                        aiPool[AIPrefabs[i]][j] = ((GameObject)Instantiate(AIPrefabs[i % AIPrefabs.Length])).GetComponent<AI>();
+                        aiPool[AIPrefabs[i]][j].gameObject.SetActive(false);
+                    }
+                    
                 }
             }
 
@@ -70,20 +76,23 @@ namespace Maniac
                 {
                     //Get the index of the spawn to spawn the enemy at.
                     int rIndex = Random.Range(0, spawners.Count);
-                    int index = -1;
+                    AISpawner spawner = spawners[rIndex];
+                    GameObject aiPrefab = GetToSpawn(spawner);
 
-                    for (int i = 0; i < PoolSize; i++)
+                    AI selectedAI = null;
+
+                    for (int i = 0; i < aiPool[aiPrefab].Length; i++)
                     {
-                        if (!aiPool[i].gameObject.activeSelf)
-                            index = i;
+                        if (!aiPool[aiPrefab][i].gameObject.activeSelf)
+                            selectedAI = aiPool[aiPrefab][i];
                     }
 
-                    if (index != -1)
+                    if (selectedAI != null)
                     {
-                        aiPool[index].transform.position = spawners[rIndex].transform.position;
-                        aiPool[index].gameObject.SetActive(true);
-                        aiPool[index].gameObject.GetComponent<Health>().ResetHealth();
-                        aiPool[index].Initialize();
+                        selectedAI.transform.position = spawner.transform.position;
+                        selectedAI.gameObject.SetActive(true);
+                        selectedAI.gameObject.GetComponent<Health>().ResetHealth();
+                        selectedAI.Initialize();
                     }
 
                     if (!ContinousSpawning)
@@ -95,6 +104,13 @@ namespace Maniac
             }
         }
 
+        private GameObject GetToSpawn(AISpawner spawner)
+        {
+            int index = Random.Range(0, spawner.EnemiesToSpawn.Length);
+
+            return spawner.EnemiesToSpawn[index];
+        }
+
         public void SpawnAI(int amount)
         {
             aiToSpawn = amount;
@@ -103,11 +119,15 @@ namespace Maniac
         public void Disable()
         {
             isRunning = false;
-            for (int i = 0; i < PoolSize; i++)
+            for (int i = 0; i < AIPrefabs.Length; i++)
             {
-                aiPool[i].gameObject.SetActive(false);
-                this.enabled = false;
+                AI[] aiArray = aiPool[AIPrefabs[i]];
+                for (int j = 0; j < aiArray.Length; j++)
+                {
+                    aiArray[j].gameObject.SetActive(false);
+                }
             }
+            this.enabled = false;
         }
 
         public void AIDied(AI ai)

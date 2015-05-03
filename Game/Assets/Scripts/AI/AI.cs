@@ -31,6 +31,9 @@ namespace Maniac
         public Weapon Weapon;
         public float Vision = 10;
 
+        //Game
+        public int MaxInGame = 1;
+
 
 
         // Use this for initialization

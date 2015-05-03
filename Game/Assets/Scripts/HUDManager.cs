@@ -25,6 +25,11 @@ public class HUDManager : MonoBehaviour {
     [SerializeField]
     private Text scoreText;
 
+    [SerializeField]
+    private Text pickupText;
+
+    private float pickupTime = 0;
+
     #endregion
 
     public void SetHealth(float health, float total)
@@ -42,5 +47,20 @@ public class HUDManager : MonoBehaviour {
     public void SetScore(int score)
     {
         scoreText.text = "Score: " + score;
+    }
+
+    public void ShowPickup(string name)
+    {
+        pickupText.gameObject.SetActive(true);
+        pickupText.text = "Pickup (" + name + ")";
+        pickupTime = Time.time;
+    }
+
+    void Update()
+    {
+        if (Time.time > pickupTime + 0.2f && pickupText.gameObject.activeInHierarchy == true)
+        {
+            pickupText.gameObject.SetActive(false);
+        }
     }
 }

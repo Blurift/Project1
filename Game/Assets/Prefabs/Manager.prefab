@@ -49,7 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PoolSize: 15
-  AIPrefab: {fileID: 100000, guid: 1efef36c00c3a8245b5cafd9ee15aaa7, type: 2}
+  AIPrefabs:
+  - {fileID: 100000, guid: 1efef36c00c3a8245b5cafd9ee15aaa7, type: 2}
   SpawnFrequency: 2
   ContinousSpawning: 1
 --- !u!114 &11400002
@@ -177,6 +178,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   ammoText: {fileID: 0}
   scoreText: {fileID: 0}
+  pickupText: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

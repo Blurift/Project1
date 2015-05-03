@@ -245,6 +245,7 @@ MonoBehaviour:
   MeleeDamage: 5
   Weapon: {fileID: 0}
   Vision: 10
+  MaxInGame: 10
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

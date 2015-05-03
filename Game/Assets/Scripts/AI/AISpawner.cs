@@ -8,6 +8,7 @@ namespace Maniac
     {
         private EntityEventManager events;
         public bool Invincible = true;
+        public GameObject[] EnemiesToSpawn;
 
         // Use this for initialization
         void Start()
