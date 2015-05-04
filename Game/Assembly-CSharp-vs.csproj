@@ -125,7 +125,9 @@
      <Compile Include="Assets\Scripts\GameLogic\GameLogic.cs" />
      <Compile Include="Assets\Scripts\GameLogic\GameManager.cs" />
      <Compile Include="Assets\Scripts\GameLogic\PlayerSpawn.cs" />
+     <Compile Include="Assets\Scripts\GameSave.cs" />
      <Compile Include="Assets\Scripts\HUDManager.cs" />
+     <Compile Include="Assets\Scripts\LevelSelector.cs" />
      <Compile Include="Assets\Scripts\OnClick.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\ProjectileManager.cs" />
