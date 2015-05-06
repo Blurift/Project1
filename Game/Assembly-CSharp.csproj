@@ -128,6 +128,7 @@
      <Compile Include="Assets\Scripts\GameSave.cs" />
      <Compile Include="Assets\Scripts\HUDManager.cs" />
      <Compile Include="Assets\Scripts\LevelSelector.cs" />
+     <Compile Include="Assets\Scripts\Menu\LevelMenuItem.cs" />
      <Compile Include="Assets\Scripts\OnClick.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\ProjectileManager.cs" />
