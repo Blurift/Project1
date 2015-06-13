@@ -127,11 +127,13 @@
      <Compile Include="Assets\Scripts\GameLogic\PlayerSpawn.cs" />
      <Compile Include="Assets\Scripts\GameSave.cs" />
      <Compile Include="Assets\Scripts\HUDManager.cs" />
-     <Compile Include="Assets\Scripts\LevelSelector.cs" />
      <Compile Include="Assets\Scripts\Menu\LevelMenuItem.cs" />
+     <Compile Include="Assets\Scripts\Menu\LevelSelector.cs" />
+     <Compile Include="Assets\Scripts\Menu\MenuManager.cs" />
      <Compile Include="Assets\Scripts\OnClick.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\ProjectileManager.cs" />
+     <Compile Include="Assets\Scripts\SaveManager.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />
      <Compile Include="Assets\Scripts\TrailRenderedFix.cs" />
      <Compile Include="Assets\Scripts\Weapon.cs" />
@@ -146,6 +148,7 @@
      <None Include="Assets\SpriteTile\Read before importing demos!.txt" />
      <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\License.txt" />
      <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\Readme.txt" />
+     <None Include="Assets\SkewTest.shader" />
      <None Include="Assets\SpriteTile\Resources\Sprites-DiffuseNonTransparent.shader" />
      <None Include="Assets\AstarPathfindingProject\link.xml" />
  <Reference Include="UnityEngine.UI">

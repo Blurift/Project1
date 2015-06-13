@@ -11,8 +11,11 @@ public class LevelMenuItem : MonoBehaviour {
 
     public Button Button;
 
+    private string levelName;
+
 	public void SetLevel(Sprite image, string name, int score, bool conquered, bool unlocked)
     {
+        levelName = name;
         LevelImage.sprite = image;
         LevelName.text = name;
         LevelScore.text = "Score: " + score;
@@ -22,6 +25,6 @@ public class LevelMenuItem : MonoBehaviour {
 
     public void OnClick()
     {
-
+        Debug.Log("Button Pressed");
     }
 }
