@@ -8,6 +8,8 @@ namespace Maniac
 {
     public class GameManager : MonoBehaviour
     {
+        public static GameType GameType = Maniac.GameType.Conquer;
+
         private static GameManager _instance;
         public static GameManager Instance
         {
@@ -26,7 +28,6 @@ namespace Maniac
         public TextAsset level;
 
         //Game Information
-        public GameType GameType = GameType.Wave;
         private GameLogic gameLogic;
 
         //Spawn

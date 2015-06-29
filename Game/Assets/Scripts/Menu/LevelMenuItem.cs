@@ -25,6 +25,8 @@ public class LevelMenuItem : MonoBehaviour {
 
     public void OnClick()
     {
-        Debug.Log("Button Pressed");
+        Debug.Log("Load Level: " + levelName);
+        Application.LoadLevel(levelName);
+        
     }
 }

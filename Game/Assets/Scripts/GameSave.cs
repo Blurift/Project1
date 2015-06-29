@@ -18,6 +18,16 @@ public class GameSave
         return count;
     }
 
+    public void SetLevelConquered(string levelName)
+    {
+        for (int i = 0; i < Levels.Length; i++)
+        {
+            Level level = Levels[i];
+            if(level.LevelName == levelName)
+                level.ConquerCompleted = true;
+        }
+    }
+
     //The default savestate when first opening a game or resetting save data.
     public static GameSave Default()
     {
@@ -25,8 +35,7 @@ public class GameSave
 
         Level level1 = new Level() { LevelName = "Streets", LevelsToUnlock = 0 };
 
-        gs.Levels = new Level[]{level1,
-            level1,level1,level1,level1,level1,level1,level1};
+        gs.Levels = new Level[]{level1};
 
         return gs;
     }

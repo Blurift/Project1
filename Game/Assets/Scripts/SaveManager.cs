@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.IO;
+using System.Xml.Serialization;
 
 public class SaveManager : MonoBehaviour {
     private static SaveManager _instance;
@@ -8,6 +9,8 @@ public class SaveManager : MonoBehaviour {
     {
         get { return _instance; }
     }
+
+    private XmlSerializer serializer;
 
 	// Use this for initialization
 	void Awake () {
@@ -20,10 +23,11 @@ public class SaveManager : MonoBehaviour {
         _instance = this;
         DontDestroyOnLoad(gameObject);
 
+        serializer = new XmlSerializer(typeof(GameSave));
+
         if (File.Exists(GetSavePath()))
         {
-            Debug.LogWarning("Not Implemented: Game Save Loading");
-            saveInstance = GameSave.Default();
+            Load();
         }
         else
             saveInstance = GameSave.Default();
@@ -49,6 +53,16 @@ public class SaveManager : MonoBehaviour {
 
     public void Save()
     {
+        string path = GetSavePath();
 
+        StreamWriter writer = new StreamWriter(path);
+        serializer.Serialize(writer, saveInstance);
+        writer.Close();
+    }
+
+    private void Load()
+    {
+        StreamReader reader = new StreamReader(GetSavePath());
+        saveInstance = (GameSave)serializer.Deserialize(reader);
     }
 }

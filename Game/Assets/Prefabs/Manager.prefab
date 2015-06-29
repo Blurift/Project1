@@ -13,7 +13,6 @@ GameObject:
   - 114: {fileID: 11411814}
   - 114: {fileID: 11411816}
   - 114: {fileID: 11400004}
-  - 114: {fileID: 11400006}
   - 114: {fileID: 11400008}
   - 114: {fileID: 11400010}
   - 114: {fileID: 11451000}
@@ -66,7 +65,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AIManager: {fileID: 100000}
   level: {fileID: 4900000, guid: 1698b9ccfc0ff6e41b9473952812816b, type: 3}
-  GameType: 0
   StartingWeapon: {fileID: 100000, guid: 8b97fe2e300d60242bd534d154b1c24f, type: 2}
   StartingSecondaryWeapon: {fileID: 100000, guid: bdf6eb890eb62aa4fa2e229fab93007a,
     type: 2}
@@ -83,19 +81,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioSourcePrefab: {fileID: 146216, guid: 2f4f67a7af9478a4d98ee1d09036781e, type: 2}
---- !u!114 &11400006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64384928cd771654cb1ff823e0a0880f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PoolSize: 10
-  ShotPrefab: {fileID: 175142, guid: 1d5535441ef59c044b06dd60600627c3, type: 2}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1

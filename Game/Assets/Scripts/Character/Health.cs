@@ -8,6 +8,7 @@ namespace Maniac
     public class Health : MonoBehaviour
     {
         public enum State { Alive, Dead };
+
         private float health;
         public float HealthCurrent
         {

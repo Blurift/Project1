@@ -28,6 +28,7 @@ namespace Maniac
     {
         public override void Start()
         {
+            Debug.Log("Conquer Game Started");
             base.Start();
             AIManager.Instance.SetSpawnersInvincible(false);
             WorldEventManager.Instance.AddListener("PlayerDied", this);
@@ -48,10 +49,13 @@ namespace Maniac
                     GameEndScreen.SetMessage("You have died in the apocalypse.");
                     break;
                 case "AISpawnerDied":
+                    Debug.Log("Spawner Died");
                     if (AIManager.Instance.SpawnersRemaining() == 0)
                     {
                         GameEndScreen.Show();
                         GameEndScreen.SetMessage("You have saved everyone from maniacs.");
+                        SaveManager.Instance.GetSave().SetLevelConquered(Application.loadedLevelName);
+                        SaveManager.Instance.Save();
                     }
                     break;
                 case "AIDied":
