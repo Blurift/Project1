@@ -36,6 +36,7 @@ namespace Maniac
 
         public bool ContinousSpawning = true;
         private int aiToSpawn = 0;
+        private bool spawnerInvincible = true;
 
         // Use this for initialization
         void Start()
@@ -61,7 +62,9 @@ namespace Maniac
             GameObject[] spawns = GameObject.FindGameObjectsWithTag("EnemySpawn");
             for (int i = 0; i < spawns.Length; i++)
             {
-                spawners.Add(spawns[i].GetComponent<AISpawner>());
+                AISpawner spawner = spawns[i].GetComponent<AISpawner>();
+                spawner.Invincible = spawnerInvincible;
+                spawners.Add(spawner);
             }
         }
 
@@ -146,6 +149,7 @@ namespace Maniac
 
         public void SetSpawnersInvincible(bool state)
         {
+            spawnerInvincible = state;
             for (int i = 0; i < spawners.Count; i++)
             {
                 spawners[i].Invincible = state;
@@ -166,7 +170,6 @@ namespace Maniac
 
             if (h != null)
             {
-                //Debug.Log("Hit");
                 h.TakeDamage(ai.MeleeDamage);
             }
         }
